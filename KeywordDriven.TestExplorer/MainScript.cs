@@ -4,18 +4,19 @@ using KeywordDriven.Config;
 using KeywordDriven.Utils;
 using KeywordDriven.Execution;
 
-namespace KeywordDriven.Tests
+namespace KeywordDriven.TestExplorer
 {
     public class MainScript
     {
         [SetUp]
         public void TestSetUp()
         {
-            ExcelManager.SetExcel(Path.GetFullPath(@"../../../") + @"Creation\TestCases.xlsx");
-            ExtentReporter.SetExtentReporter(Path.GetFullPath(@"../../../") + @"TestResults\index.html");
+            //Path.GetFullPath(@"../../../") + @"Folder\File"
+            ExcelManager.SetExcel(@"D:\Bravo\Creation\TestCases.xlsx");
+            ExtentReporter.SetExtentReporter(@"D:\Bravo\TestResults\index.html");
 
             DriverSetting.WebDriver("local", 20, 200, false);
-            DriverSetting.AndroidDriver("PhoneOreo8.1", "emulator-5554", "8.1", "");
+            DriverSetting.AndroidDriver("Pixel_3a_API_30_x86", "emulator-5554", "11", @"D:\Bravo\Resources\Bravo-Product-v5.1.4.apk");
         }
 
         [Test]
