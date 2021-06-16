@@ -57,6 +57,7 @@ namespace KeywordDriven.Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.btn_setup = new System.Windows.Forms.Button();
             this.btn_Execute = new System.Windows.Forms.Button();
+            this.btn_stopexecution = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -325,9 +326,9 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_setup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_setup.Enabled = false;
-            this.btn_setup.Location = new System.Drawing.Point(50, 322);
+            this.btn_setup.Location = new System.Drawing.Point(12, 323);
             this.btn_setup.Name = "btn_setup";
-            this.btn_setup.Size = new System.Drawing.Size(183, 29);
+            this.btn_setup.Size = new System.Drawing.Size(141, 29);
             this.btn_setup.TabIndex = 5;
             this.btn_setup.Text = "SetUp";
             this.btn_setup.UseVisualStyleBackColor = true;
@@ -337,19 +338,32 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_Execute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Execute.Enabled = false;
-            this.btn_Execute.Location = new System.Drawing.Point(300, 322);
+            this.btn_Execute.Location = new System.Drawing.Point(165, 323);
             this.btn_Execute.Name = "btn_Execute";
-            this.btn_Execute.Size = new System.Drawing.Size(183, 29);
+            this.btn_Execute.Size = new System.Drawing.Size(157, 29);
             this.btn_Execute.TabIndex = 13;
             this.btn_Execute.Text = "Execute tests";
             this.btn_Execute.UseVisualStyleBackColor = true;
             this.btn_Execute.Click += new System.EventHandler(this.btn_Execute_Click);
+            // 
+            // btn_stopexecution
+            // 
+            this.btn_stopexecution.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_stopexecution.Enabled = false;
+            this.btn_stopexecution.Location = new System.Drawing.Point(336, 323);
+            this.btn_stopexecution.Name = "btn_stopexecution";
+            this.btn_stopexecution.Size = new System.Drawing.Size(157, 29);
+            this.btn_stopexecution.TabIndex = 14;
+            this.btn_stopexecution.Text = "Stop execution";
+            this.btn_stopexecution.UseVisualStyleBackColor = true;
+            this.btn_stopexecution.Click += new System.EventHandler(this.btn_stopexecution_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 364);
+            this.Controls.Add(this.btn_stopexecution);
             this.Controls.Add(this.btn_Execute);
             this.Controls.Add(this.btn_setup);
             this.Controls.Add(this.groupBox5);
@@ -400,6 +414,7 @@ namespace KeywordDriven.Desktop
         private System.Windows.Forms.Button btn_setup;
         private System.Windows.Forms.Button btn_Execute;
         private System.Windows.Forms.Button btn_checkproject;
+        private System.Windows.Forms.Button btn_stopexecution;
     }
 }
 

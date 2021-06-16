@@ -9,6 +9,19 @@ namespace KeywordDriven.Utils
 
         private static object _setLoggerLock = new object();
 
+        public static void SetLogger(string filepath)
+        {
+            lock (_setLoggerLock)
+            {
+                _filepath = filepath;
+
+                using (var log = File.CreateText(_filepath))
+                {
+                    log.WriteLine($"Starting timestamp: {DateTime.Now.ToLocalTime()}");
+                }
+            }
+        }
+
         private static void WriteLine(string text)
         {
             using (var log = File.AppendText(_filepath))
@@ -24,22 +37,22 @@ namespace KeywordDriven.Utils
                 log.Write(text);
             }
         }
+      
+        /// <summary>
+        /// Info Start Test Case
+        /// </summary>
+        internal static void StartTestCase(String sTestCaseName)
+        {
+            Info("Start TestCase " + sTestCaseName);
+        }
 
         /// <summary>
-        /// Set Logger
+        /// Info End Test Case
         /// </summary>
-        public static void SetLogger(string testName, string filepath)
+        internal static void EndTestCase(String sTestCaseName)
         {
-            lock (_setLoggerLock)
-            {
-                _filepath = filepath;
-
-                using (var log = File.CreateText(_filepath))
-                {
-                    log.WriteLine($"Starting timestamp: {DateTime.Now.ToLocalTime()}");
-                    log.WriteLine($"Test: {testName}");
-                }
-            }
+            Info("End TestCase " + sTestCaseName);
+            WriteLine($"-------------------------");
         }
 
         /// <summary>
@@ -47,7 +60,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Info(string message)
         {
-            //WriteLine($"[INFO]: {message}");
+            WriteLine($"[INFO]: {message}");
         }
 
         /// <summary>
@@ -55,7 +68,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Step(string message)
         {
-            //WriteLine($"    [STEP]: {message}");
+            WriteLine($"    [STEP]: {message}");
         }
 
         /// <summary>
@@ -63,7 +76,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Warning(string message)
         {
-            //WriteLine($"[WARNING]: {message}");
+            WriteLine($"[WARNING]: {message}");
         }
 
         /// <summary>
@@ -71,7 +84,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Error(string message)
         {
-            //WriteLine($"[ERROR]: {message}");
+            WriteLine($"[ERROR]: {message}");
         }
 
         /// <summary>
@@ -79,7 +92,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Fatal(string message)
         {
-            //WriteLine($"[FATAL]: {message}");
+            WriteLine($"[FATAL]: {message}");
         }
 
         /// <summary>
@@ -87,7 +100,7 @@ namespace KeywordDriven.Utils
         /// </summary>
         internal static void Debug(string message)
         {
-            //WriteLine($"[DEBUG]: {message}");
+            WriteLine($"[DEBUG]: {message}");
         }
     }
 }

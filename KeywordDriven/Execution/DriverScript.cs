@@ -41,7 +41,7 @@ namespace KeywordDriven.Execution
 
                 if (sRunMode.Equals("Yes"))
                 {
-                    //Log.StartTestCase(sTestCaseID);
+                    Log.StartTestCase(sTestCaseID);
                     ExtentReporter.CreateTest(sTestCaseID + "_" + sTestCaseTitle, sTestCaseDesc);
                     ExtentReporter.StartTestCase(sTestCaseID + "_" + sTestCaseTitle);
                     iTestStep = ExcelManager.GetRowContains(sTestCaseID, Constants.Col_TestCaseID, Constants.Sheet_TestSteps);
@@ -59,7 +59,7 @@ namespace KeywordDriven.Execution
                         if (iOutcome == 3)
                         {
                             ExcelManager.SetCellData(Outcome.Error.ToString(), iTestcase, Constants.Col_Result, Constants.Sheet_TestCases);
-                            //Log.EndTestCase(sTestCaseID);
+                            Log.EndTestCase(sTestCaseID);
                             ExtentReporter.Error("TestCase " + sTestCaseID + "_" + sTestCaseTitle + " Error");
                             ExtentReporter.EndTestCase(sTestCaseID + "_" + sTestCaseTitle);
                             //Assert.Fail();
@@ -70,14 +70,14 @@ namespace KeywordDriven.Execution
                     if (iOutcome == 1)
                     {
                         ExcelManager.SetCellData(Outcome.Pass.ToString(), iTestcase, Constants.Col_Result, Constants.Sheet_TestCases);
-                        //Log.EndTestCase(sTestCaseID);
+                        Log.EndTestCase(sTestCaseID);
                         ExtentReporter.Pass("TestCase " + sTestCaseID + "_" + sTestCaseTitle + " Passed");
                         ExtentReporter.EndTestCase(sTestCaseID + "_" + sTestCaseTitle);
                     }
                     else if (iOutcome == 2)
                     {
                         ExcelManager.SetCellData(Outcome.Fail.ToString(), iTestcase, Constants.Col_Result, Constants.Sheet_TestCases);
-                        //Log.EndTestCase(sTestCaseID);
+                        Log.EndTestCase(sTestCaseID);
                         ExtentReporter.Fail("TestCase " + sTestCaseID + "_" + sTestCaseTitle + " Failed");
                         ExtentReporter.EndTestCase(sTestCaseID + "_" + sTestCaseTitle);
                     }

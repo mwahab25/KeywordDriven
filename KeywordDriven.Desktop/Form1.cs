@@ -26,16 +26,21 @@ namespace KeywordDriven.Desktop
         {
             try
             {
-                string excelpath = txt_generallocation.Text + txt_projectname.Text + @"\Creation\Testcases.xlsx";
-                string extentreportpath = txt_generallocation.Text + txt_projectname.Text + @"\TestResults\index.html";
-                string apkpath = txt_generallocation.Text + txt_projectname.Text + @"\Resources\" + txt_apkpath.Text;
+                string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
+                string excelpath = projectpath + @"\Creation\Testcases.xlsx";
+                string extentreportpath = projectpath + @"\TestResults\index.html";
+                string logpath = projectpath + @"\Logs\log.txt";
+                string apkpath = projectpath + @"\Resources\" + txt_apkpath.Text;
 
                 ExcelManager.SetExcel(excelpath);
                 ExtentReporter.SetExtentReporter(extentreportpath);
+                Log.SetLogger(logpath);
 
                 DriverSetting.WebDriver(combo_drivertype.Text, Convert.ToDouble(num_timeout.Text), Convert.ToDouble(num_navtimeout.Text), Convert.ToBoolean(combo_headless.Text));
                 DriverSetting.AndroidDriver(txt_devicename.Text, txt_udid.Text, txt_platformversion.Text, apkpath);
+                
                 DriverScript.Execute_TestCases();
+                
                 ExtentReporter.Flush();
                 ExcelManager.SaveCloseExcel();
             }
@@ -76,12 +81,14 @@ namespace KeywordDriven.Desktop
                     string creationpath = projectpath + @"\Creation";
                     string resourcespath = projectpath + @"\Resources";
                     string reportpath = projectpath + @"\TestResults";
+                    string logpath = projectpath + @"\Logs";
 
 
                     Directory.CreateDirectory(projectpath);
                     Directory.CreateDirectory(creationpath);
                     Directory.CreateDirectory(resourcespath);
                     Directory.CreateDirectory(reportpath);
+                    Directory.CreateDirectory(logpath);
 
                     var assemblyPath = Assembly.GetExecutingAssembly().Location;
                     var assemblyParentPath = Path.GetDirectoryName(assemblyPath);
@@ -143,6 +150,12 @@ namespace KeywordDriven.Desktop
                 btn_setup.Enabled = true;
                 btn_Execute.Enabled = false;
             }
+        }
+
+        private void btn_stopexecution_Click(object sender, EventArgs e)
+        {
+            ExtentReporter.Flush();
+            ExcelManager.SaveCloseExcel();
         }
     }
 }
