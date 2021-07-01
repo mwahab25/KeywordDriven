@@ -283,8 +283,8 @@ namespace KeywordDriven.ActionKeywords
         #region Public methods
         public static void Click(String obj, String data)
         {
-            Log.Info($"Clicking on Element {obj}");
-            ExtentReporter.NodeInfo($"Clicking on Element {obj}");
+            Log.Info($"Clicking on Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"Clicking on Element \"{obj}\"");
 
             try
             {
@@ -330,8 +330,8 @@ namespace KeywordDriven.ActionKeywords
 
         public static void Input(String obj, String data)
         {
-            Log.Info("Typing in Element .. " + obj);
-            ExtentReporter.NodeInfo("Typing in Element .. " + obj);
+            Log.Info($"Typing \"{data}\" in Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"Typing \"{data}\" in Element \"{obj}\"");
             try
             {
                 string[] locator = obj.Split('_');
@@ -375,8 +375,8 @@ namespace KeywordDriven.ActionKeywords
 
         public static void Select(String obj, String data)
         {
-            Log.Info($"Selecting from dropdown Element {obj}");
-            ExtentReporter.NodeInfo($"Selecting from dropdown Element {obj}");
+            Log.Info($"Selecting from dropdown Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"Selecting from dropdown Element \"{obj}\"");
 
             try
             {
@@ -473,8 +473,8 @@ namespace KeywordDriven.ActionKeywords
 
         public static void KeyPress(String obj, String data)
         {
-            Log.Info("KeyPress " + data + " on .. " + obj);
-            ExtentReporter.NodeInfo("KeyPress " + data + " on .. " + obj);
+            Log.Info($"KeyPress \"{data}\" on \"{obj}\"");
+            ExtentReporter.NodeInfo($"KeyPress \"{data}\" on \"{obj}\"");
             try
             {
                 string[] locator = obj.Split('_');
@@ -501,6 +501,17 @@ namespace KeywordDriven.ActionKeywords
                 DriverScript.iOutcome = 3;
             }
         }
+
+        public static void DoubleClick(String obj, String data)
+        {
+
+        }
+        public static void Clear(String obj, String data)
+        {
+
+        }
+       
+
         #endregion
     }
 }

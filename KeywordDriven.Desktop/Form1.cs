@@ -38,11 +38,13 @@ namespace KeywordDriven.Desktop
 
                 DriverSetting.WebDriver(combo_drivertype.Text, Convert.ToDouble(num_timeout.Text), Convert.ToDouble(num_navtimeout.Text), Convert.ToBoolean(combo_headless.Text));
                 DriverSetting.AndroidDriver(txt_devicename.Text, txt_udid.Text, txt_platformversion.Text, apkpath);
-                
+
                 DriverScript.Execute_TestCases();
-                
+
                 ExtentReporter.Flush();
                 ExcelManager.SaveCloseExcel();
+
+                
             }
             catch(Exception ex)
             {
@@ -150,12 +152,6 @@ namespace KeywordDriven.Desktop
                 btn_setup.Enabled = true;
                 btn_Execute.Enabled = false;
             }
-        }
-
-        private void btn_stopexecution_Click(object sender, EventArgs e)
-        {
-            ExtentReporter.Flush();
-            ExcelManager.SaveCloseExcel();
         }
     }
 }

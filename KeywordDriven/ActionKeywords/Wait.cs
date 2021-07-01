@@ -216,8 +216,8 @@ namespace KeywordDriven.ActionKeywords
             try
             {
                 int millisec = Convert.ToInt32(data) * 1000;
-                Log.Info($"Waiting {data} seconds");
-                ExtentReporter.NodeInfo($"Waiting {data} seconds");
+                Log.Info($"Waiting \"{data}\" seconds");
+                ExtentReporter.NodeInfo($"Waiting \"{data}\" seconds");
 
                 Thread.Sleep(millisec);
             }

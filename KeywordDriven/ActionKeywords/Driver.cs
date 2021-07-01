@@ -168,8 +168,8 @@ namespace KeywordDriven.ActionKeywords
         #region Public methods
         public static void OpenBrowser(String obj, String data)
         {
-            Log.Info($"Opening Browser {data}");
-            ExtentReporter.NodeInfo($"Opening Browser {data}");
+            Log.Info($"Opening Browser \"{data}\"");
+            ExtentReporter.NodeInfo($"Opening Browser \"{data}\"");
             try
             {
                 driver = BuildDriver(DriverSetting._drivertype, data);
@@ -229,8 +229,8 @@ namespace KeywordDriven.ActionKeywords
         {
             try
             {
-                Log.Info($"Navigating to URL {data}");
-                ExtentReporter.NodeInfo($"Navigating to URL {data}");
+                Log.Info($"Navigating to URL \"{data}\"");
+                ExtentReporter.NodeInfo($"Navigating to URL \"{data}\"");
 
                 ((IJavaScriptExecutor)driver).ExecuteScript("return window.stop;");
 
@@ -238,8 +238,8 @@ namespace KeywordDriven.ActionKeywords
                 if (!currentURL.Equals(data))
                 {
                     driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
-                    driver.Url = data;
-                    //driver.Navigate().GoToUrl(data);
+                    //driver.Url = data;
+                    driver.Navigate().GoToUrl(data);
                 }
                 else
                 {
@@ -251,6 +251,48 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Error("Not able to navigate to URL | Exception: " + e.Message);
                 ExtentReporter.NodeInfo("Not able to navigate to URL | Exception: " + e.Message);
+                DriverScript.iOutcome = 3;
+            }
+        }
+
+        public static void NavigateBack(String obj, String data)
+        {
+            try
+            {
+                Log.Info($"Navigating Back ");
+                ExtentReporter.NodeInfo($"Navigating Back ");
+
+                ((IJavaScriptExecutor)driver).ExecuteScript("return window.stop;");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
+                driver.Navigate().Back();
+
+            }
+            catch (Exception e)
+            {
+                Log.Error("Not able to navigate Back | Exception: " + e.Message);
+                ExtentReporter.NodeInfo("Not able to navigate Back | Exception: " + e.Message);
+                DriverScript.iOutcome = 3;
+            }
+        }
+        
+        public static void NavigateForward(String obj, String data)
+        {
+            try
+            {
+                Log.Info($"Navigating Forward ");
+                ExtentReporter.NodeInfo($"Navigating Forward ");
+
+                ((IJavaScriptExecutor)driver).ExecuteScript("return window.stop;");
+
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
+                driver.Navigate().Forward();
+
+            }
+            catch (Exception e)
+            {
+                Log.Error("Not able to navigate Forward | Exception: " + e.Message);
+                ExtentReporter.NodeInfo("Not able to navigate Forward | Exception: " + e.Message);
                 DriverScript.iOutcome = 3;
             }
         }
