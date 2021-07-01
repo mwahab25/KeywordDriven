@@ -9,8 +9,7 @@ using KeywordDriven.Execution;
 namespace KeywordDriven.ActionKeywords
 {
     internal partial class Keywords
-    {
-         
+    {       
         private static By LocateValue(string locatortype, string value)
         {
             By by;
@@ -302,6 +301,10 @@ namespace KeywordDriven.ActionKeywords
                         ExtentReporter.NodeError("Failed ClickByappiumDriver");
                         DriverScript.iOutcome = 3;
                     }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }
                 }
                 else
                 {
@@ -316,6 +319,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed ClickByDriver and ClickByJavascript");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
             }
@@ -348,6 +359,10 @@ namespace KeywordDriven.ActionKeywords
                         ExtentReporter.NodeError("Failed InputByappiumDriver");
                         DriverScript.iOutcome = 3;
                     }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }
                 }
                 else
                 {
@@ -362,6 +377,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed InputByDriver and InputByJavascript");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
             }
@@ -394,6 +417,10 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed SelectTextByappiumDriver and SelectValueByappiumDriver");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
                     }
                 }
                 else
@@ -406,6 +433,10 @@ namespace KeywordDriven.ActionKeywords
                             Log.Error("Failed SelectTextByDriver and SelectValueByDriver");
                             ExtentReporter.NodeError("Failed SelectTextByDriver and SelectValueByDriver");
                             DriverScript.iOutcome = 3;
+                        }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
                         }
                     }
                 }
@@ -462,6 +493,8 @@ namespace KeywordDriven.ActionKeywords
                 actions.Release(target).Perform();
 
                 WaitSeconds("", "3");
+
+                DriverScript.iOutcome = 1;
             }
             catch (Exception e)
             {

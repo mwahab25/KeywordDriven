@@ -315,6 +315,7 @@ namespace KeywordDriven.ActionKeywords
 
                 Log.Info("App Opened");
                 ExtentReporter.NodeInfo("App Opened");
+                DriverScript.iOutcome = 1;
             }
             catch (Exception e)
             {
@@ -335,6 +336,7 @@ namespace KeywordDriven.ActionKeywords
 
                 Log.Info("App Closed");
                 ExtentReporter.NodeInfo("App Closed");
+                DriverScript.iOutcome = 1;
             }
             catch (Exception e)
             {
