@@ -21,6 +21,9 @@ namespace KeywordDriven.Execution
         static String sRunMode;
         static String sData;
         internal static int iOutcome; // 1-Pass 2-Fail 3-Error
+        internal static int iOutcomePass;  //1-Pass
+        internal static int iOutcomeFail;  //2-Fail
+        internal static int iOutcomeError; //3-Error
 
         static DriverScript()
         {

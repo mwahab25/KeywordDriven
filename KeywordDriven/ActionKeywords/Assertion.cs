@@ -122,7 +122,6 @@ namespace KeywordDriven.ActionKeywords
 
                     Assert.AreEqual(result, true);
                     WaitSeconds("", "2");
-                    DriverScript.iOutcome = 1;
                 }
                 else
                 {
@@ -132,7 +131,6 @@ namespace KeywordDriven.ActionKeywords
 
                     Assert.AreEqual(result, true);
                     WaitSeconds("", "2");
-                    DriverScript.iOutcome = 1;
                 }
             }
             catch (AssertFailedException e)
