@@ -121,6 +121,8 @@ namespace KeywordDriven.ActionKeywords
                     bool result = GetTextByappiumDriver(by).Contains(data);
 
                     Assert.AreEqual(result, true);
+
+                    DriverScript.iOutcome = 1;
                     WaitSeconds("", "2");
                 }
                 else
@@ -130,20 +132,24 @@ namespace KeywordDriven.ActionKeywords
                     bool result = GetTextByDriver(by).Contains(data);
 
                     Assert.AreEqual(result, true);
+
+                    DriverScript.iOutcome = 1;
                     WaitSeconds("", "2");
                 }
             }
             catch (AssertFailedException e)
             {
-                Log.Error($"AssertElementContains Assert Fail| Exception: {e.Message}");
-                ExtentReporter.NodeFail($"AssertElementContains Assert Fail| Exception: {e.Message}");
+                Log.Info($"AssertElementContains Assert Fail| Exception: {e.Message}");
+                ExtentReporter.NodeFail("AssertElementContains Assert Fail| Exception" + e.Message.Replace('<','\"').Replace('>', '\"'));
                 DriverScript.iOutcome = 2;
+                DriverScript.bOutcomeFail = true;
             }
             catch (Exception e)
             {
                 Log.Error($"Failed AssertElementContains | Exception: {e.Message}");
                 ExtentReporter.NodeError($"Failed AssertElementContains | Exception: {e.Message}");
                 DriverScript.iOutcome = 3;
+                DriverScript.bOutcomeError = true;
             }
         }
 

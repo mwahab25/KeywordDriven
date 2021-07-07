@@ -21,9 +21,9 @@ namespace KeywordDriven.Execution
         static String sRunMode;
         static String sData;
         internal static int iOutcome; // 1-Pass 2-Fail 3-Error
-        internal static int iOutcomePass;  //1-Pass
-        internal static int iOutcomeFail;  //2-Fail
-        internal static int iOutcomeError; //3-Error
+        internal static bool bOutcomePass;  //1-Pass
+        internal static bool bOutcomeFail;  //2-Fail
+        internal static bool bOutcomeError; //3-Error
 
         static DriverScript()
         {
@@ -37,6 +37,8 @@ namespace KeywordDriven.Execution
             for (int iTestcase = 1; iTestcase < iTotalTestCases; iTestcase++)
             {
                 iOutcome = 1;
+                bOutcomeFail = false;
+
                 sTestCaseID = ExcelManager.GetCellData(iTestcase, Constants.Col_ID, Constants.Sheet_TestCases);
                 sTestCaseTitle = ExcelManager.GetCellData(iTestcase, Constants.Col_Title, Constants.Sheet_TestCases);
                 sTestCaseDesc = ExcelManager.GetCellData(iTestcase, Constants.Col_Description, Constants.Sheet_TestCases);
@@ -50,6 +52,8 @@ namespace KeywordDriven.Execution
                     iTestStep = ExcelManager.GetRowContains(sTestCaseID, Constants.Col_TestCaseID, Constants.Sheet_TestSteps);
                     iTestLastStep = ExcelManager.GetTestStepsCount(Constants.Sheet_TestSteps, sTestCaseID, iTestStep);
                     iOutcome = 1;
+                    bOutcomeFail = false;
+
                     for (; iTestStep < iTestLastStep; iTestStep++)
                     {
                         sActionKeyword = ExcelManager.GetCellData(iTestStep, Constants.Col_ActionKeyword, Constants.Sheet_TestSteps);
@@ -70,11 +74,18 @@ namespace KeywordDriven.Execution
                         }
                     }
 
-                    if (iOutcome == 1)
+                    if (iOutcome == 1 && bOutcomeFail==false)
                     {
                         ExcelManager.SetCellData(Outcome.Pass.ToString(), iTestcase, Constants.Col_Result, Constants.Sheet_TestCases);
                         Log.EndTestCase(sTestCaseID);
                         ExtentReporter.Pass("TestCase " + sTestCaseID + "_" + sTestCaseTitle + " Passed");
+                        ExtentReporter.EndTestCase(sTestCaseID + "_" + sTestCaseTitle);
+                    }
+                    else if (iOutcome == 1 && bOutcomeFail == true)
+                    {
+                        ExcelManager.SetCellData(Outcome.Fail.ToString(), iTestcase, Constants.Col_Result, Constants.Sheet_TestCases);
+                        Log.EndTestCase(sTestCaseID);
+                        ExtentReporter.Fail("TestCase " + sTestCaseID + "_" + sTestCaseTitle + " Failed");
                         ExtentReporter.EndTestCase(sTestCaseID + "_" + sTestCaseTitle);
                     }
                     else if (iOutcome == 2)
@@ -107,14 +118,13 @@ namespace KeywordDriven.Execution
                     {
                         ExcelManager.SetCellData(Outcome.Fail.ToString(), iTestStep, Constants.Col_TestStepResult, Constants.Sheet_TestSteps);
                         ExtentReporter.Fail(sTestStepDesc);
-                        //ActionKeywords.CloseBrowser("", "");
                         break;
                     }
                     else if (iOutcome == 3)
                     {
                         ExcelManager.SetCellData(Outcome.Error.ToString(), iTestStep, Constants.Col_TestStepResult, Constants.Sheet_TestSteps);
                         ExtentReporter.Error(sTestStepDesc);
-                        //ActionKeywords.CloseBrowser("", "");
+                        Keywords.CloseBrowser("", "");
                         break;
                     }
                 }

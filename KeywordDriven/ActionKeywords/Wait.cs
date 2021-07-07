@@ -220,6 +220,8 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeInfo($"Waiting \"{data}\" seconds");
 
                 Thread.Sleep(millisec);
+
+                DriverScript.iOutcome = 1;
             }
             catch (Exception e)
             {

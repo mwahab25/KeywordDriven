@@ -174,6 +174,8 @@ namespace KeywordDriven.ActionKeywords
             {
                 driver = BuildDriver(DriverSetting._drivertype, data);
 
+                DriverScript.iOutcome = 1;
+
                 Log.Info($"Browser {data} Opened");
                 ExtentReporter.NodeInfo($"Browser {data} Opened");
             }
@@ -196,6 +198,8 @@ namespace KeywordDriven.ActionKeywords
                     //driver.Quit();
                     driver.Close();
 
+                    DriverScript.iOutcome = 1;
+
                     Log.Info("Browser Closed");
                     ExtentReporter.NodeInfo("Browser Closed");
                 }
@@ -216,6 +220,8 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeInfo($"Refreshing Browser");
 
                 driver.Navigate().Refresh();
+
+                DriverScript.iOutcome = 1;
             }
             catch (Exception e)
             {
@@ -240,10 +246,14 @@ namespace KeywordDriven.ActionKeywords
                     driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
                     //driver.Url = data;
                     driver.Navigate().GoToUrl(data);
+
+                    DriverScript.iOutcome = 1;
                 }
                 else
                 {
                     driver.Navigate().Refresh();
+
+                    DriverScript.iOutcome = 1;
                 }
 
             }
@@ -267,6 +277,8 @@ namespace KeywordDriven.ActionKeywords
                 driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
                 driver.Navigate().Back();
 
+                DriverScript.iOutcome = 1;
+
             }
             catch (Exception e)
             {
@@ -288,6 +300,8 @@ namespace KeywordDriven.ActionKeywords
                 driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(DriverSetting._navigationtimeout);
                 driver.Navigate().Forward();
 
+                DriverScript.iOutcome = 1;
+
             }
             catch (Exception e)
             {
@@ -307,6 +321,8 @@ namespace KeywordDriven.ActionKeywords
                 if (data.Equals(OS.Android.ToString()))
                 {
                     OpenAndroidDriver(DriverSetting._devicename, DriverSetting._udid, DriverSetting._platformversion, DriverSetting._apppath);
+
+                    DriverScript.iOutcome = 1;
                 }
                 else if (data.Equals(OS.IOS.ToString()))
                 {
@@ -332,6 +348,8 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeInfo("Closing App");
 
                 appiumdriver.Quit();
+
+                DriverScript.iOutcome = 1;
 
                 Log.Info("App Closed");
                 ExtentReporter.NodeInfo("App Closed");

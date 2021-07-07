@@ -301,6 +301,10 @@ namespace KeywordDriven.ActionKeywords
                         ExtentReporter.NodeError("Failed ClickByappiumDriver");
                         DriverScript.iOutcome = 3;
                     }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }    
                 }
                 else
                 {
@@ -315,6 +319,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed ClickByDriver and ClickByJavascript");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
             }
@@ -347,6 +359,10 @@ namespace KeywordDriven.ActionKeywords
                         ExtentReporter.NodeError("Failed InputByappiumDriver");
                         DriverScript.iOutcome = 3;
                     }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }
                 }
                 else
                 {
@@ -361,6 +377,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed InputByDriver and InputByJavascript");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
             }
@@ -393,6 +417,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed SelectTextByappiumDriver and SelectValueByappiumDriver");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
                 else
@@ -406,6 +438,14 @@ namespace KeywordDriven.ActionKeywords
                             ExtentReporter.NodeError("Failed SelectTextByDriver and SelectValueByDriver");
                             DriverScript.iOutcome = 3;
                         }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
                     }
                 }
             }
@@ -460,6 +500,7 @@ namespace KeywordDriven.ActionKeywords
                 actions.MoveByOffset(target.Location.X - source.Location.X, target.Location.Y - source.Location.Y).Perform();
                 actions.Release(target).Perform();
 
+                DriverScript.iOutcome = 1;
                 WaitSeconds("", "3");
             }
             catch (Exception e)
@@ -481,15 +522,20 @@ namespace KeywordDriven.ActionKeywords
                 {
                     case "enter":
                         driver.FindElement(LocateValue(locator[1], GetKey(obj))).SendKeys(Keys.Enter);
+                        DriverScript.iOutcome = 1;
                         break;
                     case "return":
                         driver.FindElement(LocateValue(locator[1], GetKey(obj))).SendKeys(Keys.Return);
+                        DriverScript.iOutcome = 1;
                         break;
                     case "tab":
                         driver.FindElement(LocateValue(locator[1], GetKey(obj))).SendKeys(Keys.Tab);
+                        DriverScript.iOutcome = 1;
                         break;
                     default:
                         Log.Error("Not a key");
+                        ExtentReporter.NodeError("Not a key");
+                        DriverScript.iOutcome = 3;
                         break;
                 }
             }
