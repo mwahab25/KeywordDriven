@@ -122,10 +122,7 @@ namespace KeywordDriven.ActionKeywords
         {
             public Dictionary<string, object> prefs { get; set; }
         }
-
-        /// <summary>
-        /// appium android capabilities
-        /// </summary>     
+ 
         private static void OpenAndroidDriver(string devicename, string udid, string platformversion, string apppath)
         {
             var appiumoption = new AppiumOptions();
@@ -139,26 +136,14 @@ namespace KeywordDriven.ActionKeywords
             appiumdriver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), appiumoption);
         }
 
-        /// <summary>
-        /// Takes a screenshot of the current page as a .png file.
-        /// <para>Example: Driver.TakeScreenshot("~/pics/ss", "example")</para>
-        /// <para>This saves the screenshot as ~/pics/ss/example.png</para>
-        /// </summary>
-        /// <param name="directory">Directory to save the file to.</param>
-        /// <param name="imgName">Image name without .png extension.</param>
-        public static void TakeScreenshot(string directory, string imgName)
+        private static void TakeScreenshot(string directory, string imgName)
         {
             var ss = ((ITakesScreenshot)driver).GetScreenshot();
             var ssFileName = Path.Combine(directory, imgName);
             ss.SaveAsFile($"{ssFileName}.png", ScreenshotImageFormat.Png);
         }
 
-        /// <summary>
-        /// Takes a screenshot of the current page as a .png file and
-        /// saves it in the current test's auto-generated directory.
-        /// </summary>
-        /// <param name="imgName">Image name without .png extension.</param>
-        public static void TakeScreenshot(string imgName)
+        private static void TakeScreenshot(string imgName)
         {
             var ss = ((ITakesScreenshot)driver).GetScreenshot();
             var ssFileName = Path.Combine("", imgName);
@@ -318,13 +303,13 @@ namespace KeywordDriven.ActionKeywords
 
             try
             {
-                if (data.Equals(OS.Android.ToString()))
+                if (data.Equals("Android"))
                 {
                     OpenAndroidDriver(DriverSetting._devicename, DriverSetting._udid, DriverSetting._platformversion, DriverSetting._apppath);
 
                     DriverScript.iOutcome = 1;
                 }
-                else if (data.Equals(OS.IOS.ToString()))
+                else if (data.Equals("IOS"))
                 {
                     //IOS
                 }

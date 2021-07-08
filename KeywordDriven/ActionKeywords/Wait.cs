@@ -25,56 +25,8 @@ namespace KeywordDriven.ActionKeywords
                 Log.Error("Failed WaitUntil | Exception: " + e.Message);
             }
         }
-
-        private static void WaitUntilClickable(By by, IWebDriver driver)
-        {
-            try
-            {
-                Log.Info("WaitUntilClickable ..");
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
-                wait.Until(ExpectedConditions.ElementToBeClickable(by));
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitUntilClickable | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed WaitUntil | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitUntilExists(By by, IWebDriver driver)
-        {
-            try
-            {
-                Log.Info("WaitUntilExists ..");
-                ExtentReporter.NodeInfo("WaitUntilExists ..");
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
-                wait.Until(ExpectedConditions.ElementExists(by));
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitUntilExists | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed WaitUntilExists | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitUntilVisible(By by, IWebDriver driver)
-        {
-            try
-            {
-                Log.Info("WaitUntilVisible ..");
-                ExtentReporter.NodeInfo("WaitUntilVisible ..");
-
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
-                wait.Until(ExpectedConditions.ElementIsVisible(by));
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitUntilVisible | Exception: " + e.Message);
-                ExtentReporter.NodeError("Failed WaitUntilVisible | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitFluentUntil(By by)
+        
+        private static void WaitFluentUntil(By by, IWebDriver driver)
         {
             try
             {
@@ -93,15 +45,63 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeError("Failed WaitFluentUntil | Exception: " + e.Message);
             }
         }
+        
+        private static void WaitUntilClickable(By by, IWebDriver driver)
+        {
+            try
+            {
+                Log.Info("WaitUntilClickable ..");
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(by));
+            }
+            catch (Exception e)
+            {
+                Log.Error("Failed WaitUntilClickable | Exception: " + e.Message);
+                ExtentReporter.NodeInfo("Failed WaitUntilClickable | Exception: " + e.Message);
+            }
+        }
 
-        private static void WaitUntilUrlContains(String data)
+        private static void WaitUntilExists(By by, IWebDriver driver)
+        {
+            try
+            {
+                Log.Info("WaitUntilExists ..");
+                ExtentReporter.NodeInfo("WaitUntilExists ..");
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(by));
+            }
+            catch (Exception e)
+            {
+                Log.Error("Failed WaitUntilExists | Exception: " + e.Message);
+                ExtentReporter.NodeInfo("Failed WaitUntilExists | Exception: " + e.Message);
+            }
+        }
+
+        private static void WaitUntilVisible(By by, IWebDriver driver)
+        {
+            try
+            {
+                Log.Info("WaitUntilVisible ..");
+                ExtentReporter.NodeInfo("WaitUntilVisible ..");
+
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+            }
+            catch (Exception e)
+            {
+                Log.Error("Failed WaitUntilVisible | Exception: " + e.Message);
+                ExtentReporter.NodeError("Failed WaitUntilVisible | Exception: " + e.Message);
+            }
+        }
+
+        private static void WaitUntilUrlContains(String data, IWebDriver driver)
         {
             try
             {
                 Log.Info("WaitUntilUrlContains .." + data);
                 ExtentReporter.NodeInfo("WaitUntilUrlContains ..");
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._navigationtimeout));
-                wait.Until(ExpectedConditions.UrlContains(data));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.UrlContains(data));
             }
             catch (Exception e)
             {
@@ -110,103 +110,19 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
-        private static void WaitUntilInvisibilityElement(By by)
+        private static void WaitUntilInvisibilityElement(By by, IWebDriver driver)
         {
             try
             {
                 Log.Info("WaitUntilInvisibilityElement ..");
                 ExtentReporter.NodeInfo("WaitUntilInvisibilityElement ..");
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._navigationtimeout));
-                wait.Until(ExpectedConditions.InvisibilityOfElementLocated(by));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(by));
             }
             catch (Exception e)
             {
                 Log.Error("Failed WaitUntilInvisibilityElement | Exception: " + e.Message);
                 ExtentReporter.NodeError("Failed WaitUntilInvisibilityElement | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitForInvisibilityLoading(out double loadtime)
-        {
-            Log.Info("WaitForInvisibilityLoading ..");
-            loadtime = 0;
-            WaitSeconds("", "1");
-
-            try
-            {
-                By by = By.CssSelector("svg");
-                if (driver.FindElement(by).Displayed == false)
-                {
-                    WaitSeconds("", "1");
-
-                    if (driver.FindElement(by).Displayed == false)
-                        WaitSeconds("", "1");
-
-                    int iteration = 1;
-                    Boolean load = driver.FindElement(by).Displayed;
-                    while (load)
-                    {
-                        load = driver.FindElement(by).Displayed;
-                        WaitSeconds("", "1");
-                        iteration += 1;
-                        if ((!load) || (iteration == 2000))
-                            break;
-
-                    }
-                    if (iteration == 2000)
-                    {
-                        Log.Error("WaitForInvisibilityLoading | time out ..");
-                    }
-                }
-                else
-                {
-                    int iteration = 1;
-                    Boolean load = driver.FindElement(by).Displayed;
-                    while (load)
-                    {
-                        load = driver.FindElement(by).Displayed;
-                        WaitSeconds("", "1");
-                        iteration += 1;
-                        if ((!load) || (iteration == 2000))
-                            break;
-
-                    }
-                    if (iteration == 2000)
-                    {
-                        Log.Error("WaitForInvisibilityLoading | time out ..");
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitForInvisibilityLoading | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitForElement(By by)
-        {
-            Log.Info("WaitForElement ..");
-            WaitSeconds("", "1");
-            try
-            {
-                int iteration = 0;
-                bool item = CheckElement(by);
-                while (!item)
-                {
-                    iteration += 1;
-                    WaitSeconds("", "1");
-                    item = CheckElement(by);
-                    if ((item) || (iteration == 2000))
-                        break;
-                }
-                if (iteration == 2000)
-                {
-                    Log.Error("WaitForElement | time out ..");
-                }
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitForElement | Exception: " + e.Message);
             }
         }
 

@@ -45,7 +45,7 @@ namespace KeywordDriven.ActionKeywords
 
         private static string GetKey(String obj)
         {
-           return ExcelManager.GetKeyValue(obj, Constants.Col_Loc_PageObject, Constants.Sheet_Locators);
+           return ExcelManager.GetKeyValue(obj, ExcelSetting.Col_Loc_PageObject, ExcelSetting.Sheet_Locators);
         }
 
         private static bool IsElementPresent(By by)
@@ -57,43 +57,10 @@ namespace KeywordDriven.ActionKeywords
             }
             catch (NoSuchElementException e)
             {
-                Log.Info($"No able to find element by IsElementPresent | Exception: {e.Message}");
-                ExtentReporter.NodeInfo($"No able to find element by IsElementPresent | Exception: {e.Message}");
+                Log.Info($"Not able to find element by IsElementPresent | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to find element by IsElementPresent | Exception: {e.Message}");
                 return false;
             }
-        }
-
-        private static bool CheckElement(By by)
-        {
-            bool CH1 = false;
-            try
-            {
-                CH1 = IsElementPresent(By.CssSelector("svg"));
-            }
-            catch { }
-            bool CH2;
-            if (driver.FindElement(By.CssSelector("svg")).Displayed)
-            {
-                CH2 = true;
-            }
-            else
-            {
-                CH2 = false;
-            }
-            bool CH3;
-            try
-            {
-                CH3 = driver.FindElement(by).Displayed;
-            }
-            catch (NoSuchElementException)
-            {
-                CH3 = false;
-            }
-
-            if (!CH1 && !CH2 && CH3)
-                return true;
-            else
-                return false;
         }
 
         private static bool ClickByDriver(By by)
@@ -129,6 +96,24 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Info($"Not able to ClickByJavascript | Exception: {e.Message}");
                 ExtentReporter.NodeInfo($"Not able to ClickByJavascript | Exception: {e.Message}");
+                return false;
+            }
+        }
+
+        private static bool ClickByappiumDriver(By by)
+        {
+            try
+            {
+                Log.Info("ClickByappiumDriver ..");
+                ExtentReporter.NodeInfo("ClickByappiumDriver ..");
+
+                appiumdriver.FindElement(by).Click();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to ClickByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByappiumDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -170,6 +155,25 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
+        private static bool InputByappiumDriver(By by, String data)
+        {
+            try
+            {
+                Log.Info("InputByappiumDriver ..");
+                ExtentReporter.NodeInfo("InputByappiumDriver ..");
+
+                appiumdriver.FindElement(by).SendKeys(data);
+                return true;
+
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to InputByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to InputByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+        
         private static bool SelectTextByDriver(By by, string data)
         {
             try
@@ -202,43 +206,6 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Info($"Not able to SelectValueByDriver | Exception: {e.Message}");
                 ExtentReporter.NodeInfo($"Not able to SelectValueByDriver | Exception: {e.Message}");
-                return false;
-            }
-        }
-
-        private static bool InputByappiumDriver(By by, String data)
-        {
-            try
-            {
-                Log.Info("InputByappiumDriver ..");
-                ExtentReporter.NodeInfo("InputByappiumDriver ..");
-
-                appiumdriver.FindElement(by).SendKeys(data);
-                return true;
-
-            }
-            catch (Exception e)
-            {
-                Log.Info($"Not able to InputByappiumDriver | Exception: {e.Message}");
-                ExtentReporter.NodeInfo($"Not able to InputByappiumDriver | Exception: {e.Message}");
-                return false;
-            }
-        }
-
-        private static bool ClickByappiumDriver(By by)
-        {
-            try
-            {
-                Log.Info("ClickByappiumDriver ..");
-                ExtentReporter.NodeInfo("ClickByappiumDriver ..");
-
-                appiumdriver.FindElement(by).Click();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Log.Info($"Not able to ClickByappiumDriver | Exception: {e.Message}");
-                ExtentReporter.NodeInfo($"Not able to ClickByappiumDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -408,7 +375,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntil(by, appiumdriver);
+                    WaitUntilExists(by, appiumdriver);
                     if (!SelectTextByappiumDriver(by, data))
                     {
                         if (!SelectValueByappiumDriver(by, data))
@@ -429,7 +396,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntil(by, driver);
+                    WaitUntilExists(by, driver);
                     if (!SelectTextByDriver(by, data))
                     {
                         if (!SelectValueByDriver(by, data))

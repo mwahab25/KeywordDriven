@@ -10,9 +10,6 @@ namespace KeywordDriven.Utils
         private static Excel.Workbook ExcelWBook;
         private static Excel.Worksheet ExcelWSheet;
 
-        /// <summary>
-        /// Open specific Excel workbook
-        /// </summary>
         public static void SetExcel(String path)
         {
             ExcelApp = new Excel.Application
@@ -29,9 +26,6 @@ namespace KeywordDriven.Utils
             ExcelApp.Quit();
         }
 
-        /// <summary>
-        /// Get cell data from specific Excel sheet
-        /// </summary>
         internal static string GetCellData(int rowNum, int colNum, String sheetName)
         {
             ExcelWSheet = ExcelWBook.Sheets[sheetName] as Excel.Worksheet;
@@ -39,9 +33,6 @@ namespace KeywordDriven.Utils
             return cellValue;
         }
 
-        /// <summary>
-        /// Get used rows count from specific Excel sheet
-        /// </summary>
         internal static int GetRowCount(String sheetName)
         {
             int number;
@@ -50,9 +41,6 @@ namespace KeywordDriven.Utils
             return number;
         }
 
-        /// <summary>
-        /// Get specific cell contains based on test case from specific Excel sheet
-        /// </summary>
         internal static int GetRowContains(String testCaseName, int colNum, String sheetName)
         {
             int rowNum = 0;
@@ -82,17 +70,14 @@ namespace KeywordDriven.Utils
                     break;
                 }
             }
-            return GetCellData(rowNum, colNum+1, sheetName);
+            return GetCellData(rowNum, colNum + 1, sheetName);
         }
 
-        /// <summary>
-        /// Get number of steps of test case from specific Excel sheet
-        /// </summary>
         internal static int GetTestStepsCount(String sheetName, String testCaseID, int testCaseStart)
         {
             for (int i = testCaseStart; i <= ExcelManager.GetRowCount(sheetName); i++)
             {
-                if (!testCaseID.Equals(ExcelManager.GetCellData(i, Constants.Col_TestCaseID, sheetName)))
+                if (!testCaseID.Equals(ExcelManager.GetCellData(i, ExcelSetting.Col_TestCaseID, sheetName)))
                 {
                     int number = i;
                     return number;
@@ -103,10 +88,7 @@ namespace KeywordDriven.Utils
             return number1;
         }
 
-        /// <summary>
-        /// Set data into cell in specific Excel sheet
-        /// </summary>
-       internal static void SetCellData(String Result, int rowNum, int colNum, String sheetName)
+        internal static void SetCellData(String Result, int rowNum, int colNum, String sheetName)
         {
             ExcelWSheet = ExcelWBook.Sheets[sheetName] as Excel.Worksheet;
             (ExcelWSheet.Cells[rowNum + 1, colNum + 1] as Excel.Range).Value = Result;

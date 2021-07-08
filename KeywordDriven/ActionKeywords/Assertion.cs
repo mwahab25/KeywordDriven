@@ -1,8 +1,8 @@
-﻿using KeywordDriven.Execution;
-using KeywordDriven.Utils;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using System;
+using KeywordDriven.Utils;
+using KeywordDriven.Execution;
 
 namespace KeywordDriven.ActionKeywords
 {
@@ -80,35 +80,11 @@ namespace KeywordDriven.ActionKeywords
             return elementTxt;
         }
 
-        public static void AssetPass(String obj, String data)
+        #region Public methods
+        public static void AssertTextPresent(String obj, String data)
         {
-
-        }
-
-        public static void AssetFail(String obj, String data)
-        {
-            
-        }
-
-        public static void AssetEqual(String obj, String data)
-        {
-
-        }
-
-        public static void AssetNull(String obj, String data)
-        {
-
-        }
-
-        public static void AssetElementExists(String obj, String data)
-        {
-
-        }
-
-        public static void AssetElementContains(String obj, String data)
-        {
-            Log.Info($"AssertElement \"{obj}\" Contains \"{data}\"");
-            ExtentReporter.NodeInfo($"AssertElement \"{obj}\" Contains \"{data}\"");
+            Log.Info($"AssertTextPresent \"{data}\", Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"AssertTextPresent \"{data}\", Element \"{obj}\"");
             try
             {
                 string[] locator = obj.Split('_');
@@ -116,7 +92,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntil(by, appiumdriver);
+                    WaitUntilVisible(by, appiumdriver);
 
                     bool result = GetTextByappiumDriver(by).Contains(data);
 
@@ -127,7 +103,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntil(by, driver);
+                    WaitUntilVisible(by, driver);
 
                     bool result = GetTextByDriver(by).Contains(data);
 
@@ -139,33 +115,151 @@ namespace KeywordDriven.ActionKeywords
             }
             catch (AssertFailedException e)
             {
-                Log.Info($"AssertElementContains Assert Fail| Exception: {e.Message}");
-                ExtentReporter.NodeFail("AssertElementContains Assert Fail| Exception" + e.Message.Replace('<','\"').Replace('>', '\"'));
+                Log.Info($"AssertTextPresent Fail| Exception: {e.Message}");
+                ExtentReporter.NodeFail("AssertTextPresent Fail| Exception" + e.Message.Replace('<','\"').Replace('>', '\"'));
                 DriverScript.iOutcome = 2;
                 DriverScript.bOutcomeFail = true;
             }
             catch (Exception e)
             {
-                Log.Error($"Failed AssertElementContains | Exception: {e.Message}");
-                ExtentReporter.NodeError($"Failed AssertElementContains | Exception: {e.Message}");
+                Log.Error($"Failed AssertTextPresent | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed AssertTextPresent | Exception: {e.Message}");
                 DriverScript.iOutcome = 3;
                 DriverScript.bOutcomeError = true;
             }
         }
 
-        public static void AssertURLExists(String obj, String data)
+        public static void AssertTextNotPresent(String obj, String data)
+        {
+            Log.Info($"AssertTextNotPresent \"{data}\", Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"AssertTextNotPresent \"{data}\", Element \"{obj}\"");
+            try
+            {
+                string[] locator = obj.Split('_');
+                By by = LocateValue(locator[1], GetKey(obj));
+
+                if (locator[0] == "Mobile")
+                {
+                    WaitUntilVisible(by, appiumdriver);
+
+                    bool result = GetTextByappiumDriver(by).Contains(data);
+
+                    Assert.AreNotEqual(result, true);
+
+                    DriverScript.iOutcome = 1;
+                    WaitSeconds("", "2");
+                }
+                else
+                {
+                    WaitUntilVisible(by, driver);
+
+                    bool result = GetTextByDriver(by).Contains(data);
+
+                    Assert.AreEqual(result, true);
+
+                    DriverScript.iOutcome = 1;
+                    WaitSeconds("", "2");
+                }
+            }
+            catch (AssertFailedException e)
+            {
+                Log.Info($"AssertTextNotPresent Fail| Exception: {e.Message}");
+                ExtentReporter.NodeFail("AssertTextNotPresent Fail| Exception" + e.Message.Replace('<', '\"').Replace('>', '\"'));
+                DriverScript.iOutcome = 2;
+                DriverScript.bOutcomeFail = true;
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Failed AssertTextNotPresent | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed AssertTextNotPresent | Exception: {e.Message}");
+                DriverScript.iOutcome = 3;
+                DriverScript.bOutcomeError = true;
+            }
+        }
+
+        public static void AssertValue(String obj, String data)
         {
 
         }
 
-        public static void AssertURLContains(String obj, String data)
+        public static void AssertNotValue(String obj, String data)
         {
 
         }
 
-        public static void AssetFileExists(String obj, String data)
+        public static void AssetElementPresent(String obj, String data)
+        {
+
+        }
+        
+        public static void AssetElementNotPresent(String obj, String data)
+        {
+
+        }
+
+        public static void AssetChecked(String obj, String data)
+        {
+
+        }
+
+        public static void AssetNotChecked(String obj, String data)
+        {
+
+        }
+
+        public static void AssertSelectedOption(String obj, String data)
+        { }
+        
+        public static void AssertNotSelectedOption(String obj, String data)
+        { 
+
+        }
+
+        public static void AssertSelectedValue(String obj, String data)
+        { 
+
+        }
+
+        public static void AssertNotSelectedValue(String obj, String data)
+        { 
+
+        }
+
+        public static void AssertSelectedIndex(String obj, String data)
+        {
+
+        }
+
+        public static void AssertNotSelectedIndex(String obj, String data)
+        { 
+
+        }
+
+        public static void AssetEditable(String obj, String data)
+        {
+
+        }
+
+        public static void AssetNotEditable(String obj, String data)
+        {
+
+        }
+
+        public static void AssertURLPresent(String obj, String data)
+        {
+
+        }
+
+        public static void AssertURLContain(String obj, String data)
+        {
+
+        }
+
+        public static void AssetFilePresent(String obj, String data)
         {
             
         }
+        
+        #endregion
     }
 }
