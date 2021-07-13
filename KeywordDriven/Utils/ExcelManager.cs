@@ -77,7 +77,7 @@ namespace KeywordDriven.Utils
         {
             for (int i = testCaseStart; i <= ExcelManager.GetRowCount(sheetName); i++)
             {
-                if (!testCaseID.Equals(ExcelManager.GetCellData(i, ExcelSetting.Col_TestCaseID, sheetName)))
+                if (!testCaseID.Equals(ExcelManager.GetCellData(i, ExcelSetting.Col_TestSteps_TestCaseID, sheetName)))
                 {
                     int number = i;
                     return number;

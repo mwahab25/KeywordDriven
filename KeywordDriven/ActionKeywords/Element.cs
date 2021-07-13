@@ -45,7 +45,7 @@ namespace KeywordDriven.ActionKeywords
 
         private static string GetKey(String obj)
         {
-           return ExcelManager.GetKeyValue(obj, ExcelSetting.Col_Loc_PageObject, ExcelSetting.Sheet_Locators);
+           return ExcelManager.GetKeyValue(obj, ExcelSetting.Col_Locators_PageObject, ExcelSetting.Sheet_Locators);
         }
 
         private static bool IsElementPresent(By by)

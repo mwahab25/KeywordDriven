@@ -32,6 +32,10 @@ namespace KeywordDriven.Desktop
                 string logpath = projectpath + @"\Logs\log.txt";
                 string apkpath = projectpath + @"\Resources\" + txt_apkpath.Text;
 
+                ExcelSetting.Locators_Columns_Index(Convert.ToInt32(num_locpageobject.Value), Convert.ToInt32(num_loclocator.Value));
+                ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_tcid.Value), Convert.ToInt32(num_tctitle.Value), Convert.ToInt32(num_tcdesc.Value), Convert.ToInt32(num_tcrunmode.Value), Convert.ToInt32(num_tcresult.Value));
+                ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_tstestcaseid.Value), Convert.ToInt32(num_tsstepno.Value), Convert.ToInt32(num_tsdesc.Value), Convert.ToInt32(num_tspageobject.Value), Convert.ToInt32(num_tsactionkeyword.Value), Convert.ToInt32(num_tsdataset.Value), Convert.ToInt32(num_tsresult.Value));
+                
                 ExcelManager.SetExcel(excelpath);
                 ExtentReporter.SetExtentReporter(extentreportpath);
                 Log.SetLogger(logpath);

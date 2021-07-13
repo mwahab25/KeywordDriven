@@ -1,31 +1,56 @@
 ﻿namespace KeywordDriven.Config
 {
-    class ExcelSetting
+    public class ExcelSetting
     {
-        //Excel sheets Data
-        public static string Sheet_PagesObjects = "Pages Objects";
-        public static string Sheet_TestCases = "Test Cases";
-        public static string Sheet_TestSteps = "Test Steps";
-        public static string Sheet_Locators = "Locators";
+        //Excel sheets Default Data
+        internal static string Sheet_Locators = "Locators";
+        internal static string Sheet_TestCases = "TestCases";
+        internal static string Sheet_TestSteps = "TestSteps";
 
-        //Test Steps Sheet Column Numbers
-        public static int Col_TestCaseID = 0;
-        public static int Col_TestStepID = 1;
-        public static int Col_TestStepDesc = 2;
-        public static int Col_PageObject = 4;
-        public static int Col_ActionKeyword = 5;
-        public static int Col_DataSet = 6;
-        public static int Col_TestStepResult = 7;
+        //Locators Sheet Default Columns Indexes
+        internal static int Col_Locators_PageObject = 0;
+        internal static int Col_Locators_Locator = 1;
 
-        //Test Cases Sheet Column Numbers 
-        public static int Col_ID = 0;
-        public static int Col_Title = 1;
-        public static int Col_Description = 2;
-        public static int Col_RunMode = 3;
-        public static int Col_Result = 4;
+        //TestCases Sheet Default Columns Indexes
+        internal static int Col_TestCases_ID = 0;
+        internal static int Col_TestCases_Title = 1;
+        internal static int Col_TestCases_Description = 2;
+        internal static int Col_TestCases_RunMode = 3;
+        internal static int Col_TestCases_Result = 4;
 
-        //Locators Sheet Column Numbers
-        public static int Col_Loc_PageObject = 0;
-        public static int Col_Locator = 1;
+        //TestSteps Sheet Default Columns Indexes
+        internal static int Col_TestSteps_TestCaseID = 0;
+        internal static int Col_TestSteps_StepNo = 1;
+        internal static int Col_TestSteps_Description = 2;
+        internal static int Col_TestSteps_PageObject = 4;
+        internal static int Col_TestSteps_ActionKeyword = 5;
+        internal static int Col_TestSteps_DataSet = 6;
+        internal static int Col_TestSteps_Result = 7;
+
+        public static void Locators_Columns_Index(int PageObject, int Locator)
+        {
+            Col_Locators_PageObject = PageObject;
+            Col_Locators_Locator = Locator;
+        }
+
+        public static void TestCases_Columns_Index(int ID, int Title,int Description,int RunMode,int Result)
+        {
+            Col_TestCases_ID = ID;
+            Col_TestCases_Title = Title;
+            Col_TestCases_Description = Description;
+            Col_TestCases_RunMode = RunMode;
+            Col_TestCases_Result = Result;
+        }
+
+        public static void TestSteps_Columns_Index(int TestCaseID, int StepNo, int Description,int PageObject, int ActionKeyword, int DataSet, int Result)
+        {
+            Col_TestSteps_TestCaseID = TestCaseID;
+            Col_TestSteps_StepNo = StepNo;
+            Col_TestSteps_Description = Description;
+            Col_TestSteps_PageObject = PageObject;
+            Col_TestSteps_ActionKeyword = ActionKeyword;
+            Col_TestSteps_DataSet = DataSet;
+            Col_TestSteps_Result = Result;
+        }
     }
 }
