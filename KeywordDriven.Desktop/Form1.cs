@@ -77,8 +77,6 @@ namespace KeywordDriven.Desktop
 
         private void btn_setup_Click(object sender, EventArgs e)
         {
-            //File.WriteAllBytes(txt_excelpath.Text, Properties.Resources.TestCases);
-
             try
             {
                 if (txt_generallocation.Text != "" && txt_projectname.Text != "")

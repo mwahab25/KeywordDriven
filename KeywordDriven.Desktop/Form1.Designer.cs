@@ -484,7 +484,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsactionkeyword
             // 
-            this.num_tsactionkeyword.Enabled = false;
             this.num_tsactionkeyword.Location = new System.Drawing.Point(145, 415);
             this.num_tsactionkeyword.Margin = new System.Windows.Forms.Padding(4);
             this.num_tsactionkeyword.Name = "num_tsactionkeyword";
@@ -548,7 +547,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tspageobject
             // 
-            this.num_tspageobject.Enabled = false;
             this.num_tspageobject.Location = new System.Drawing.Point(347, 373);
             this.num_tspageobject.Margin = new System.Windows.Forms.Padding(4);
             this.num_tspageobject.Name = "num_tspageobject";
@@ -572,7 +570,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsdataset
             // 
-            this.num_tsdataset.Enabled = false;
             this.num_tsdataset.Location = new System.Drawing.Point(347, 412);
             this.num_tsdataset.Margin = new System.Windows.Forms.Padding(4);
             this.num_tsdataset.Name = "num_tsdataset";
@@ -586,7 +583,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsdesc
             // 
-            this.num_tsdesc.Enabled = false;
             this.num_tsdesc.Location = new System.Drawing.Point(145, 376);
             this.num_tsdesc.Margin = new System.Windows.Forms.Padding(4);
             this.num_tsdesc.Name = "num_tsdesc";
@@ -600,7 +596,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsresult
             // 
-            this.num_tsresult.Enabled = false;
             this.num_tsresult.Location = new System.Drawing.Point(145, 456);
             this.num_tsresult.Margin = new System.Windows.Forms.Padding(4);
             this.num_tsresult.Name = "num_tsresult";
@@ -614,7 +609,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsstepno
             // 
-            this.num_tsstepno.Enabled = false;
             this.num_tsstepno.Location = new System.Drawing.Point(347, 334);
             this.num_tsstepno.Margin = new System.Windows.Forms.Padding(4);
             this.num_tsstepno.Name = "num_tsstepno";
@@ -628,7 +622,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tstestcaseid
             // 
-            this.num_tstestcaseid.Enabled = false;
             this.num_tstestcaseid.Location = new System.Drawing.Point(145, 334);
             this.num_tstestcaseid.Margin = new System.Windows.Forms.Padding(4);
             this.num_tstestcaseid.Name = "num_tstestcaseid";
@@ -677,7 +670,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcrunmode
             // 
-            this.num_tcrunmode.Enabled = false;
             this.num_tcrunmode.Location = new System.Drawing.Point(347, 199);
             this.num_tcrunmode.Margin = new System.Windows.Forms.Padding(4);
             this.num_tcrunmode.Name = "num_tcrunmode";
@@ -691,7 +683,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcresult
             // 
-            this.num_tcresult.Enabled = false;
             this.num_tcresult.Location = new System.Drawing.Point(145, 238);
             this.num_tcresult.Margin = new System.Windows.Forms.Padding(4);
             this.num_tcresult.Name = "num_tcresult";
@@ -705,7 +696,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcdesc
             // 
-            this.num_tcdesc.Enabled = false;
             this.num_tcdesc.Location = new System.Drawing.Point(145, 199);
             this.num_tcdesc.Margin = new System.Windows.Forms.Padding(4);
             this.num_tcdesc.Name = "num_tcdesc";
@@ -719,7 +709,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tctitle
             // 
-            this.num_tctitle.Enabled = false;
             this.num_tctitle.Location = new System.Drawing.Point(347, 160);
             this.num_tctitle.Margin = new System.Windows.Forms.Padding(4);
             this.num_tctitle.Name = "num_tctitle";
@@ -733,7 +722,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcid
             // 
-            this.num_tcid.Enabled = false;
             this.num_tcid.Location = new System.Drawing.Point(145, 160);
             this.num_tcid.Margin = new System.Windows.Forms.Padding(4);
             this.num_tcid.Name = "num_tcid";
@@ -742,7 +730,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_locpageobject
             // 
-            this.num_locpageobject.Enabled = false;
             this.num_locpageobject.Location = new System.Drawing.Point(145, 67);
             this.num_locpageobject.Margin = new System.Windows.Forms.Padding(4);
             this.num_locpageobject.Name = "num_locpageobject";
@@ -751,7 +738,6 @@ namespace KeywordDriven.Desktop
             // 
             // num_loclocator
             // 
-            this.num_loclocator.Enabled = false;
             this.num_loclocator.Location = new System.Drawing.Point(347, 69);
             this.num_loclocator.Margin = new System.Windows.Forms.Padding(4);
             this.num_loclocator.Name = "num_loclocator";
