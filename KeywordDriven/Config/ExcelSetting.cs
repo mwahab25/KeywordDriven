@@ -24,7 +24,7 @@
         internal static int Col_TestSteps_Description = 2;
         internal static int Col_TestSteps_PageObject = 4;
         internal static int Col_TestSteps_ActionKeyword = 5;
-        internal static int Col_TestSteps_DataSet = 6;
+        internal static int Col_TestSteps_TestData = 6;
         internal static int Col_TestSteps_Result = 7;
 
         public static void Locators_Columns_Index(int PageObject, int Locator)
@@ -42,14 +42,14 @@
             Col_TestCases_Result = Result;
         }
 
-        public static void TestSteps_Columns_Index(int TestCaseID, int StepNo, int Description,int PageObject, int ActionKeyword, int DataSet, int Result)
+        public static void TestSteps_Columns_Index(int TestCaseID, int StepNo, int Description,int PageObject, int ActionKeyword, int TestData, int Result)
         {
             Col_TestSteps_TestCaseID = TestCaseID;
             Col_TestSteps_StepNo = StepNo;
             Col_TestSteps_Description = Description;
             Col_TestSteps_PageObject = PageObject;
             Col_TestSteps_ActionKeyword = ActionKeyword;
-            Col_TestSteps_DataSet = DataSet;
+            Col_TestSteps_TestData = TestData;
             Col_TestSteps_Result = Result;
         }
     }

@@ -57,7 +57,7 @@ namespace KeywordDriven.Execution
                     {
                         sActionKeyword = ExcelManager.GetCellData(iTestStep, ExcelSetting.Col_TestSteps_ActionKeyword, ExcelSetting.Sheet_TestSteps);
                         sPageObject = ExcelManager.GetCellData(iTestStep, ExcelSetting.Col_TestSteps_PageObject, ExcelSetting.Sheet_TestSteps);
-                        sData = ExcelManager.GetCellData(iTestStep, ExcelSetting.Col_TestSteps_DataSet, ExcelSetting.Sheet_TestSteps);
+                        sData = ExcelManager.GetCellData(iTestStep, ExcelSetting.Col_TestSteps_TestData, ExcelSetting.Sheet_TestSteps);
                         sTestStepDesc = ExcelManager.GetCellData(iTestStep, ExcelSetting.Col_TestSteps_Description, ExcelSetting.Sheet_TestSteps);
                         ExtentReporter.CreateNode(sTestStepDesc);
                         Execute_Actions();
