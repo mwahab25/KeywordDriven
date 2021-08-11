@@ -27,10 +27,10 @@ namespace KeywordDriven.Desktop
             try
             {
                 string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
-                string excelpath = projectpath + @"\Creation\Testcases.xlsx";
+                string excelpath = projectpath + @"\TestDefintion\Testcases.xlsx";
                 string extentreportpath = projectpath + @"\TestResults\index.html";
-                string logpath = projectpath + @"\Logs\log.txt";
-                string apkpath = projectpath + @"\Resources\" + txt_apkpath.Text;
+                string logpath = projectpath + @"\TestLogs\log.txt";
+                string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
 
                 ExcelSetting.Locators_Columns_Index(Convert.ToInt32(num_locpageobject.Value), Convert.ToInt32(num_loclocator.Value));
                 ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_tcid.Value), Convert.ToInt32(num_tctitle.Value), Convert.ToInt32(num_tcdesc.Value), Convert.ToInt32(num_tcrunmode.Value), Convert.ToInt32(num_tcresult.Value));
@@ -82,10 +82,10 @@ namespace KeywordDriven.Desktop
                 if (txt_generallocation.Text != "" && txt_projectname.Text != "")
                 {
                     string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
-                    string creationpath = projectpath + @"\Creation";
-                    string resourcespath = projectpath + @"\Resources";
+                    string creationpath = projectpath + @"\TestDefintion";
+                    string resourcespath = projectpath + @"\TestResources";
                     string reportpath = projectpath + @"\TestResults";
-                    string logpath = projectpath + @"\Logs";
+                    string logpath = projectpath + @"\TestLogs";
 
 
                     Directory.CreateDirectory(projectpath);
