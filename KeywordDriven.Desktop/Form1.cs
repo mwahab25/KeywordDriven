@@ -123,7 +123,7 @@ namespace KeywordDriven.Desktop
         private void btn_checkproject_Click(object sender, EventArgs e)
         {
             string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
-            string creationpath = projectpath + @"\Creation";
+            string creationpath = projectpath + @"\TestDefintion";
 
             string fileName = "TestCases.xlsx";
             string destFile = Path.Combine(creationpath, fileName);
@@ -153,6 +153,29 @@ namespace KeywordDriven.Desktop
             {
                 btn_setup.Enabled = true;
                 btn_Execute.Enabled = false;
+            }
+        }
+
+        private void btn_selectapklocation_Click(object sender, EventArgs e)
+        {
+            try
+            {              
+                OpenFileDialog openFileDialog1 = new OpenFileDialog()
+                {
+                    Filter = "apk files (*.apk)|*.apk"
+                };
+
+                DialogResult result = openFileDialog1.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                   
+                    txt_apkpath.Text = openFileDialog1.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

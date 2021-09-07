@@ -38,6 +38,7 @@ namespace KeywordDriven.Desktop
             this.txt_projectname = new System.Windows.Forms.TextBox();
             this.txt_generallocation = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_selectapklocation = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_apkpath = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -190,6 +191,7 @@ namespace KeywordDriven.Desktop
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btn_selectapklocation);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.txt_apkpath);
             this.groupBox4.Controls.Add(this.label9);
@@ -206,6 +208,17 @@ namespace KeywordDriven.Desktop
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "MobieDriver setting";
+            // 
+            // btn_selectapklocation
+            // 
+            this.btn_selectapklocation.Location = new System.Drawing.Point(452, 146);
+            this.btn_selectapklocation.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_selectapklocation.Name = "btn_selectapklocation";
+            this.btn_selectapklocation.Size = new System.Drawing.Size(71, 36);
+            this.btn_selectapklocation.TabIndex = 22;
+            this.btn_selectapklocation.Text = "Select";
+            this.btn_selectapklocation.UseVisualStyleBackColor = true;
+            this.btn_selectapklocation.Click += new System.EventHandler(this.btn_selectapklocation_Click);
             // 
             // label10
             // 
@@ -242,6 +255,7 @@ namespace KeywordDriven.Desktop
             this.txt_platformversion.Name = "txt_platformversion";
             this.txt_platformversion.Size = new System.Drawing.Size(210, 31);
             this.txt_platformversion.TabIndex = 19;
+            this.txt_platformversion.Text = "11";
             // 
             // txt_udid
             // 
@@ -250,6 +264,7 @@ namespace KeywordDriven.Desktop
             this.txt_udid.Name = "txt_udid";
             this.txt_udid.Size = new System.Drawing.Size(210, 31);
             this.txt_udid.TabIndex = 17;
+            this.txt_udid.Text = "emulator-5554";
             // 
             // label8
             // 
@@ -278,6 +293,7 @@ namespace KeywordDriven.Desktop
             this.txt_devicename.Name = "txt_devicename";
             this.txt_devicename.Size = new System.Drawing.Size(210, 31);
             this.txt_devicename.TabIndex = 15;
+            this.txt_devicename.Text = "Pixel_3a_API_30_x86";
             // 
             // groupBox3
             // 
@@ -906,6 +922,7 @@ namespace KeywordDriven.Desktop
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button btn_selectapklocation;
     }
 }
 
