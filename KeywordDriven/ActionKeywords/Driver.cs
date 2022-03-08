@@ -42,6 +42,9 @@ namespace KeywordDriven.ActionKeywords
             options.AddArgument("--disable-browser-side-navigation");
             options.AddArgument("--disable-gpu");
 
+            options.AddArgument("--ignore-ssl-errors=yes");
+            options.AddArgument("--ignore-certificate-errors");
+
             if (DriverSetting._headless)
             {
                 options.AddArguments("--headless");

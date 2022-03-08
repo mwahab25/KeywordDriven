@@ -11,7 +11,6 @@ namespace KeywordDriven.TestExplorer
         [SetUp]
         public void TestSetUp()
         {
-            //Path.GetFullPath(@"../../../") + @"Folder\File"
             ExcelManager.SetExcel(@"D:\Bravo\Creation\TestCases.xlsx");
             ExtentReporter.SetExtentReporter(@"D:\Bravo\TestResults\index.html");
             Log.SetLogger(@"D:\Bravo\Logs\log.txt");

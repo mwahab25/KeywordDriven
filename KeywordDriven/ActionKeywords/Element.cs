@@ -514,6 +514,12 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
+        public static void KeyPressEnter(String obj, String data)
+        {
+            Actions builder = new Actions(driver);
+            builder.SendKeys(Keys.Enter);
+        }
+
         public static void DoubleClick(String obj, String data)
         {
 
