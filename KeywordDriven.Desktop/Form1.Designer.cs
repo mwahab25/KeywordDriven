@@ -90,6 +90,43 @@ namespace KeywordDriven.Desktop
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_Manual = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -110,6 +147,24 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -120,7 +175,12 @@ namespace KeywordDriven.Desktop
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.txt_projectname);
             this.groupBox5.Controls.Add(this.txt_generallocation);
+<<<<<<< HEAD
             this.groupBox5.Location = new System.Drawing.Point(9, 0);
+=======
+            this.groupBox5.Location = new System.Drawing.Point(7, 7);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(427, 88);
             this.groupBox5.TabIndex = 12;
@@ -192,7 +252,12 @@ namespace KeywordDriven.Desktop
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txt_devicename);
+<<<<<<< HEAD
             this.groupBox4.Location = new System.Drawing.Point(9, 248);
+=======
+            this.groupBox4.Location = new System.Drawing.Point(7, 317);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(427, 160);
             this.groupBox4.TabIndex = 11;
@@ -286,7 +351,12 @@ namespace KeywordDriven.Desktop
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.combo_drivertype);
             this.groupBox3.Controls.Add(this.label3);
+<<<<<<< HEAD
             this.groupBox3.Location = new System.Drawing.Point(9, 86);
+=======
+            this.groupBox3.Location = new System.Drawing.Point(7, 114);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(427, 162);
             this.groupBox3.TabIndex = 10;
@@ -387,7 +457,12 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_setup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_setup.Enabled = false;
+<<<<<<< HEAD
             this.btn_setup.Location = new System.Drawing.Point(226, 414);
+=======
+            this.btn_setup.Location = new System.Drawing.Point(354, 525);
+            this.btn_setup.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.btn_setup.Name = "btn_setup";
             this.btn_setup.Size = new System.Drawing.Size(141, 29);
             this.btn_setup.TabIndex = 22;
@@ -399,7 +474,12 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_Execute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Execute.Enabled = false;
+<<<<<<< HEAD
             this.btn_Execute.Location = new System.Drawing.Point(374, 414);
+=======
+            this.btn_Execute.Location = new System.Drawing.Point(539, 525);
+            this.btn_Execute.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.btn_Execute.Name = "btn_Execute";
             this.btn_Execute.Size = new System.Drawing.Size(157, 29);
             this.btn_Execute.TabIndex = 23;
@@ -440,8 +520,12 @@ namespace KeywordDriven.Desktop
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
+<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(444, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(548, 7);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(305, 408);
@@ -789,11 +873,441 @@ namespace KeywordDriven.Desktop
             this.label15.TabIndex = 29;
             this.label15.Text = "Locators Columns Indexes";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(680, 566);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.TabIndex = 25;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1023, 614);
+            this.tabControl1.TabIndex = 26;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1015, 576);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Projects";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.btn_Manual);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1015, 576);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Manual Test";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.btn_Execute);
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Controls.Add(this.btn_setup);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1015, 576);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Automation";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_Manual
+            // 
+            this.btn_Manual.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Manual.Location = new System.Drawing.Point(115, 483);
+            this.btn_Manual.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Manual.Name = "btn_Manual";
+            this.btn_Manual.Size = new System.Drawing.Size(196, 36);
+            this.btn_Manual.TabIndex = 25;
+            this.btn_Manual.Text = "Manual Test";
+            this.btn_Manual.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(59, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 31);
+            this.textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(59, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(59, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Project Name";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.label35);
+            this.groupBox2.Controls.Add(this.label36);
+            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.label37);
+            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.numericUpDown4);
+            this.groupBox2.Controls.Add(this.numericUpDown5);
+            this.groupBox2.Controls.Add(this.numericUpDown6);
+            this.groupBox2.Controls.Add(this.numericUpDown7);
+            this.groupBox2.Controls.Add(this.label38);
+            this.groupBox2.Controls.Add(this.label39);
+            this.groupBox2.Controls.Add(this.label40);
+            this.groupBox2.Controls.Add(this.label41);
+            this.groupBox2.Controls.Add(this.numericUpDown8);
+            this.groupBox2.Controls.Add(this.numericUpDown9);
+            this.groupBox2.Controls.Add(this.numericUpDown10);
+            this.groupBox2.Controls.Add(this.numericUpDown11);
+            this.groupBox2.Controls.Add(this.numericUpDown12);
+            this.groupBox2.Controls.Add(this.label43);
+            this.groupBox2.Controls.Add(this.label45);
+            this.groupBox2.Location = new System.Drawing.Point(21, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(381, 432);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Excel Setting";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(6, 83);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 25);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "ID";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(219, 335);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(74, 25);
+            this.label14.TabIndex = 58;
+            this.label14.Text = "DataSet";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(140, 336);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown1.TabIndex = 57;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(6, 338);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 25);
+            this.label20.TabIndex = 56;
+            this.label20.Text = "ActionKeyword";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Location = new System.Drawing.Point(218, 296);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(102, 25);
+            this.label26.TabIndex = 54;
+            this.label26.Text = "PageObject";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label34.Location = new System.Drawing.Point(6, 379);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(59, 25);
+            this.label34.TabIndex = 60;
+            this.label34.Text = "Result";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label35.Location = new System.Drawing.Point(219, 257);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(71, 25);
+            this.label35.TabIndex = 48;
+            this.label35.Text = "StepNo";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label36.Location = new System.Drawing.Point(6, 299);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(102, 25);
+            this.label36.TabIndex = 50;
+            this.label36.Text = "Description";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(321, 294);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown2.TabIndex = 55;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label37.Location = new System.Drawing.Point(6, 260);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(97, 25);
+            this.label37.TabIndex = 46;
+            this.label37.Text = "TestCaseID";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(321, 333);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown3.TabIndex = 59;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(140, 297);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown4.TabIndex = 51;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(140, 377);
+            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown5.TabIndex = 61;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(321, 255);
+            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown6.TabIndex = 49;
+            this.numericUpDown6.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Location = new System.Drawing.Point(140, 255);
+            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown7.TabIndex = 47;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label38.Location = new System.Drawing.Point(6, 161);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 25);
+            this.label38.TabIndex = 43;
+            this.label38.Text = "Result";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label39.Location = new System.Drawing.Point(218, 122);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(90, 25);
+            this.label39.TabIndex = 41;
+            this.label39.Text = "RunMode";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label40.Location = new System.Drawing.Point(219, 81);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(44, 25);
+            this.label40.TabIndex = 37;
+            this.label40.Text = "Title";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label41.Location = new System.Drawing.Point(6, 122);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(102, 25);
+            this.label41.TabIndex = 39;
+            this.label41.Text = "Description";
+            // 
+            // numericUpDown8
+            // 
+            this.numericUpDown8.Location = new System.Drawing.Point(321, 120);
+            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown8.TabIndex = 42;
+            this.numericUpDown8.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.Location = new System.Drawing.Point(140, 159);
+            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown9.TabIndex = 44;
+            this.numericUpDown9.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.Location = new System.Drawing.Point(140, 120);
+            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown10.TabIndex = 40;
+            this.numericUpDown10.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown11
+            // 
+            this.numericUpDown11.Location = new System.Drawing.Point(321, 81);
+            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown11.Name = "numericUpDown11";
+            this.numericUpDown11.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown11.TabIndex = 38;
+            this.numericUpDown11.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown12
+            // 
+            this.numericUpDown12.Location = new System.Drawing.Point(140, 81);
+            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown12.Name = "numericUpDown12";
+            this.numericUpDown12.Size = new System.Drawing.Size(50, 31);
+            this.numericUpDown12.TabIndex = 36;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label43.Location = new System.Drawing.Point(6, 217);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(225, 25);
+            this.label43.TabIndex = 45;
+            this.label43.Text = "TestSteps Columns Indexes";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label45.Location = new System.Drawing.Point(6, 43);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(227, 25);
+            this.label45.TabIndex = 34;
+            this.label45.Text = "TestCases Columns Indexes";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(59, 194);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 225);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(761, 457);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Execute);
@@ -801,6 +1315,11 @@ namespace KeywordDriven.Desktop
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
+=======
+            this.ClientSize = new System.Drawing.Size(1049, 645);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.label1);
+>>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -831,7 +1350,28 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -896,6 +1436,43 @@ namespace KeywordDriven.Desktop
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btn_selectapklocation;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btn_Manual;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
