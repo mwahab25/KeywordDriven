@@ -90,9 +90,6 @@ namespace KeywordDriven.Desktop
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -113,7 +110,6 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).BeginInit();
-            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -445,9 +441,9 @@ namespace KeywordDriven.Desktop
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Location = new System.Drawing.Point(444, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(305, 408);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -793,43 +789,12 @@ namespace KeywordDriven.Desktop
             this.label15.TabIndex = 29;
             this.label15.Text = "Locators Columns Indexes";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(52, 464);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(709, 235);
-            this.tabControl1.TabIndex = 24;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(242, 92);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Automation";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(701, 202);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Manual";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(989, 711);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(761, 457);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Execute);
             this.Controls.Add(this.btn_setup);
@@ -866,7 +831,6 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).EndInit();
-            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -932,9 +896,6 @@ namespace KeywordDriven.Desktop
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btn_selectapklocation;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
