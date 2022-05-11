@@ -90,6 +90,9 @@ namespace KeywordDriven.Desktop
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -110,6 +113,7 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -120,11 +124,9 @@ namespace KeywordDriven.Desktop
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.txt_projectname);
             this.groupBox5.Controls.Add(this.txt_generallocation);
-            this.groupBox5.Location = new System.Drawing.Point(11, 0);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Location = new System.Drawing.Point(9, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(534, 110);
+            this.groupBox5.Size = new System.Drawing.Size(427, 88);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Location setting";
@@ -132,10 +134,9 @@ namespace KeywordDriven.Desktop
             // btn_checkproject
             // 
             this.btn_checkproject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_checkproject.Location = new System.Drawing.Point(373, 63);
-            this.btn_checkproject.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_checkproject.Location = new System.Drawing.Point(298, 50);
             this.btn_checkproject.Name = "btn_checkproject";
-            this.btn_checkproject.Size = new System.Drawing.Size(71, 36);
+            this.btn_checkproject.Size = new System.Drawing.Size(57, 29);
             this.btn_checkproject.TabIndex = 5;
             this.btn_checkproject.Text = "Check";
             this.btn_checkproject.UseVisualStyleBackColor = true;
@@ -143,10 +144,9 @@ namespace KeywordDriven.Desktop
             // 
             // btn_selectlocation
             // 
-            this.btn_selectlocation.Location = new System.Drawing.Point(452, 22);
-            this.btn_selectlocation.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_selectlocation.Location = new System.Drawing.Point(362, 18);
             this.btn_selectlocation.Name = "btn_selectlocation";
-            this.btn_selectlocation.Size = new System.Drawing.Size(71, 36);
+            this.btn_selectlocation.Size = new System.Drawing.Size(57, 29);
             this.btn_selectlocation.TabIndex = 2;
             this.btn_selectlocation.Text = "Select";
             this.btn_selectlocation.UseVisualStyleBackColor = true;
@@ -155,38 +155,34 @@ namespace KeywordDriven.Desktop
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 70);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(7, 56);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 25);
+            this.label12.Size = new System.Drawing.Size(96, 20);
             this.label12.TabIndex = 3;
             this.label12.Text = "Project name";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 29);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(7, 23);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 25);
+            this.label11.Size = new System.Drawing.Size(121, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "General Location";
             // 
             // txt_projectname
             // 
-            this.txt_projectname.Location = new System.Drawing.Point(162, 66);
-            this.txt_projectname.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_projectname.Location = new System.Drawing.Point(130, 53);
             this.txt_projectname.Name = "txt_projectname";
-            this.txt_projectname.Size = new System.Drawing.Size(203, 31);
+            this.txt_projectname.Size = new System.Drawing.Size(163, 27);
             this.txt_projectname.TabIndex = 4;
             // 
             // txt_generallocation
             // 
             this.txt_generallocation.Enabled = false;
-            this.txt_generallocation.Location = new System.Drawing.Point(162, 25);
-            this.txt_generallocation.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_generallocation.Location = new System.Drawing.Point(130, 20);
             this.txt_generallocation.Name = "txt_generallocation";
-            this.txt_generallocation.Size = new System.Drawing.Size(282, 31);
+            this.txt_generallocation.Size = new System.Drawing.Size(226, 27);
             this.txt_generallocation.TabIndex = 1;
             // 
             // groupBox4
@@ -200,21 +196,18 @@ namespace KeywordDriven.Desktop
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txt_devicename);
-            this.groupBox4.Location = new System.Drawing.Point(11, 310);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(9, 248);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(534, 200);
+            this.groupBox4.Size = new System.Drawing.Size(427, 160);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "MobieDriver setting";
             // 
             // btn_selectapklocation
             // 
-            this.btn_selectapklocation.Location = new System.Drawing.Point(452, 146);
-            this.btn_selectapklocation.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_selectapklocation.Location = new System.Drawing.Point(362, 117);
             this.btn_selectapklocation.Name = "btn_selectapklocation";
-            this.btn_selectapklocation.Size = new System.Drawing.Size(71, 36);
+            this.btn_selectapklocation.Size = new System.Drawing.Size(57, 29);
             this.btn_selectapklocation.TabIndex = 22;
             this.btn_selectapklocation.Text = "Select";
             this.btn_selectapklocation.UseVisualStyleBackColor = true;
@@ -223,75 +216,67 @@ namespace KeywordDriven.Desktop
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 152);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(7, 122);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 25);
+            this.label10.Size = new System.Drawing.Size(35, 20);
             this.label10.TabIndex = 20;
             this.label10.Text = "Apk";
             // 
             // txt_apkpath
             // 
-            this.txt_apkpath.Location = new System.Drawing.Point(162, 149);
-            this.txt_apkpath.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apkpath.Location = new System.Drawing.Point(130, 119);
             this.txt_apkpath.Name = "txt_apkpath";
-            this.txt_apkpath.Size = new System.Drawing.Size(282, 31);
+            this.txt_apkpath.Size = new System.Drawing.Size(226, 27);
             this.txt_apkpath.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 113);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(7, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 25);
+            this.label9.Size = new System.Drawing.Size(117, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "Platform version";
             // 
             // txt_platformversion
             // 
-            this.txt_platformversion.Location = new System.Drawing.Point(162, 110);
-            this.txt_platformversion.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_platformversion.Location = new System.Drawing.Point(130, 88);
             this.txt_platformversion.Name = "txt_platformversion";
-            this.txt_platformversion.Size = new System.Drawing.Size(210, 31);
+            this.txt_platformversion.Size = new System.Drawing.Size(169, 27);
             this.txt_platformversion.TabIndex = 19;
             this.txt_platformversion.Text = "11";
             // 
             // txt_udid
             // 
-            this.txt_udid.Location = new System.Drawing.Point(162, 71);
-            this.txt_udid.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_udid.Location = new System.Drawing.Point(130, 57);
             this.txt_udid.Name = "txt_udid";
-            this.txt_udid.Size = new System.Drawing.Size(210, 31);
+            this.txt_udid.Size = new System.Drawing.Size(169, 27);
             this.txt_udid.TabIndex = 17;
             this.txt_udid.Text = "emulator-5554";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 74);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(7, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 25);
+            this.label8.Size = new System.Drawing.Size(41, 20);
             this.label8.TabIndex = 16;
             this.label8.Text = "Udid";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 33);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 25);
+            this.label7.Size = new System.Drawing.Size(95, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Device name";
             // 
             // txt_devicename
             // 
-            this.txt_devicename.Location = new System.Drawing.Point(162, 30);
-            this.txt_devicename.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_devicename.Location = new System.Drawing.Point(130, 24);
             this.txt_devicename.Name = "txt_devicename";
-            this.txt_devicename.Size = new System.Drawing.Size(210, 31);
+            this.txt_devicename.Size = new System.Drawing.Size(169, 27);
             this.txt_devicename.TabIndex = 15;
             this.txt_devicename.Text = "Pixel_3a_API_30_x86";
             // 
@@ -305,26 +290,23 @@ namespace KeywordDriven.Desktop
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.combo_drivertype);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(11, 108);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(9, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(534, 203);
+            this.groupBox3.Size = new System.Drawing.Size(427, 162);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "WebDriver setting";
             // 
             // num_navtimeout
             // 
-            this.num_navtimeout.Location = new System.Drawing.Point(161, 152);
-            this.num_navtimeout.Margin = new System.Windows.Forms.Padding(4);
+            this.num_navtimeout.Location = new System.Drawing.Point(129, 122);
             this.num_navtimeout.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
             this.num_navtimeout.Name = "num_navtimeout";
-            this.num_navtimeout.Size = new System.Drawing.Size(156, 31);
+            this.num_navtimeout.Size = new System.Drawing.Size(125, 27);
             this.num_navtimeout.TabIndex = 13;
             this.num_navtimeout.Value = new decimal(new int[] {
             200,
@@ -334,10 +316,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_timeout
             // 
-            this.num_timeout.Location = new System.Drawing.Point(161, 113);
-            this.num_timeout.Margin = new System.Windows.Forms.Padding(4);
+            this.num_timeout.Location = new System.Drawing.Point(129, 90);
             this.num_timeout.Name = "num_timeout";
-            this.num_timeout.Size = new System.Drawing.Size(156, 31);
+            this.num_timeout.Size = new System.Drawing.Size(125, 27);
             this.num_timeout.TabIndex = 11;
             this.num_timeout.Value = new decimal(new int[] {
             20,
@@ -348,20 +329,18 @@ namespace KeywordDriven.Desktop
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 75);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 25);
+            this.label6.Size = new System.Drawing.Size(69, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Headless";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 154);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(7, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 25);
+            this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "NavTimeout";
             // 
@@ -371,20 +350,18 @@ namespace KeywordDriven.Desktop
             this.combo_headless.Items.AddRange(new object[] {
             "true",
             "false"});
-            this.combo_headless.Location = new System.Drawing.Point(162, 72);
-            this.combo_headless.Margin = new System.Windows.Forms.Padding(4);
+            this.combo_headless.Location = new System.Drawing.Point(130, 58);
             this.combo_headless.Name = "combo_headless";
-            this.combo_headless.Size = new System.Drawing.Size(155, 33);
+            this.combo_headless.Size = new System.Drawing.Size(125, 28);
             this.combo_headless.TabIndex = 9;
             this.combo_headless.Text = "false";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 115);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "Timeout";
             // 
@@ -395,20 +372,18 @@ namespace KeywordDriven.Desktop
             this.combo_drivertype.Items.AddRange(new object[] {
             "local",
             "remote"});
-            this.combo_drivertype.Location = new System.Drawing.Point(162, 31);
-            this.combo_drivertype.Margin = new System.Windows.Forms.Padding(4);
+            this.combo_drivertype.Location = new System.Drawing.Point(130, 25);
             this.combo_drivertype.Name = "combo_drivertype";
-            this.combo_drivertype.Size = new System.Drawing.Size(155, 33);
+            this.combo_drivertype.Size = new System.Drawing.Size(125, 28);
             this.combo_drivertype.TabIndex = 7;
             this.combo_drivertype.Text = "local";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 25);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Driver type";
             // 
@@ -416,10 +391,9 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_setup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_setup.Enabled = false;
-            this.btn_setup.Location = new System.Drawing.Point(282, 518);
-            this.btn_setup.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_setup.Location = new System.Drawing.Point(226, 414);
             this.btn_setup.Name = "btn_setup";
-            this.btn_setup.Size = new System.Drawing.Size(176, 36);
+            this.btn_setup.Size = new System.Drawing.Size(141, 29);
             this.btn_setup.TabIndex = 22;
             this.btn_setup.Text = "SetUp";
             this.btn_setup.UseVisualStyleBackColor = true;
@@ -429,10 +403,9 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_Execute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Execute.Enabled = false;
-            this.btn_Execute.Location = new System.Drawing.Point(467, 518);
-            this.btn_Execute.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Execute.Location = new System.Drawing.Point(374, 414);
             this.btn_Execute.Name = "btn_Execute";
-            this.btn_Execute.Size = new System.Drawing.Size(196, 36);
+            this.btn_Execute.Size = new System.Drawing.Size(157, 29);
             this.btn_Execute.TabIndex = 23;
             this.btn_Execute.Text = "Execute tests";
             this.btn_Execute.UseVisualStyleBackColor = true;
@@ -471,9 +444,11 @@ namespace KeywordDriven.Desktop
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(555, 0);
+            this.groupBox1.Location = new System.Drawing.Point(444, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 510);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(305, 408);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Excel Setting";
@@ -482,9 +457,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label33.Location = new System.Drawing.Point(6, 162);
+            this.label33.Location = new System.Drawing.Point(5, 130);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(30, 25);
+            this.label33.Size = new System.Drawing.Size(24, 20);
             this.label33.TabIndex = 35;
             this.label33.Text = "ID";
             // 
@@ -492,18 +468,18 @@ namespace KeywordDriven.Desktop
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(219, 414);
+            this.label32.Location = new System.Drawing.Point(175, 331);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(74, 25);
+            this.label32.Size = new System.Drawing.Size(62, 20);
             this.label32.TabIndex = 58;
             this.label32.Text = "DataSet";
             // 
             // num_tsactionkeyword
             // 
-            this.num_tsactionkeyword.Location = new System.Drawing.Point(140, 415);
-            this.num_tsactionkeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tsactionkeyword.Location = new System.Drawing.Point(112, 332);
             this.num_tsactionkeyword.Name = "num_tsactionkeyword";
-            this.num_tsactionkeyword.Size = new System.Drawing.Size(50, 31);
+            this.num_tsactionkeyword.Size = new System.Drawing.Size(40, 27);
             this.num_tsactionkeyword.TabIndex = 57;
             this.num_tsactionkeyword.Value = new decimal(new int[] {
             5,
@@ -515,9 +491,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(6, 417);
+            this.label31.Location = new System.Drawing.Point(5, 334);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(132, 25);
+            this.label31.Size = new System.Drawing.Size(110, 20);
             this.label31.TabIndex = 56;
             this.label31.Text = "ActionKeyword";
             // 
@@ -525,9 +502,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(218, 375);
+            this.label30.Location = new System.Drawing.Point(174, 300);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(102, 25);
+            this.label30.Size = new System.Drawing.Size(85, 20);
             this.label30.TabIndex = 54;
             this.label30.Text = "PageObject";
             // 
@@ -535,9 +513,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(6, 458);
+            this.label25.Location = new System.Drawing.Point(5, 366);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 25);
+            this.label25.Size = new System.Drawing.Size(49, 20);
             this.label25.TabIndex = 60;
             this.label25.Text = "Result";
             // 
@@ -545,9 +524,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(219, 336);
+            this.label27.Location = new System.Drawing.Point(175, 269);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(71, 25);
+            this.label27.Size = new System.Drawing.Size(59, 20);
             this.label27.TabIndex = 48;
             this.label27.Text = "StepNo";
             // 
@@ -555,18 +535,18 @@ namespace KeywordDriven.Desktop
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(6, 378);
+            this.label28.Location = new System.Drawing.Point(5, 302);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(102, 25);
+            this.label28.Size = new System.Drawing.Size(85, 20);
             this.label28.TabIndex = 50;
             this.label28.Text = "Description";
             // 
             // num_tspageobject
             // 
-            this.num_tspageobject.Location = new System.Drawing.Point(321, 373);
-            this.num_tspageobject.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tspageobject.Location = new System.Drawing.Point(257, 298);
             this.num_tspageobject.Name = "num_tspageobject";
-            this.num_tspageobject.Size = new System.Drawing.Size(50, 31);
+            this.num_tspageobject.Size = new System.Drawing.Size(40, 27);
             this.num_tspageobject.TabIndex = 55;
             this.num_tspageobject.Value = new decimal(new int[] {
             4,
@@ -578,18 +558,18 @@ namespace KeywordDriven.Desktop
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(6, 339);
+            this.label29.Location = new System.Drawing.Point(5, 271);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(97, 25);
+            this.label29.Size = new System.Drawing.Size(81, 20);
             this.label29.TabIndex = 46;
             this.label29.Text = "TestCaseID";
             // 
             // num_tsdataset
             // 
-            this.num_tsdataset.Location = new System.Drawing.Point(321, 412);
-            this.num_tsdataset.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tsdataset.Location = new System.Drawing.Point(257, 330);
             this.num_tsdataset.Name = "num_tsdataset";
-            this.num_tsdataset.Size = new System.Drawing.Size(50, 31);
+            this.num_tsdataset.Size = new System.Drawing.Size(40, 27);
             this.num_tsdataset.TabIndex = 59;
             this.num_tsdataset.Value = new decimal(new int[] {
             6,
@@ -599,10 +579,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsdesc
             // 
-            this.num_tsdesc.Location = new System.Drawing.Point(140, 376);
-            this.num_tsdesc.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tsdesc.Location = new System.Drawing.Point(112, 301);
             this.num_tsdesc.Name = "num_tsdesc";
-            this.num_tsdesc.Size = new System.Drawing.Size(50, 31);
+            this.num_tsdesc.Size = new System.Drawing.Size(40, 27);
             this.num_tsdesc.TabIndex = 51;
             this.num_tsdesc.Value = new decimal(new int[] {
             2,
@@ -612,10 +591,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsresult
             // 
-            this.num_tsresult.Location = new System.Drawing.Point(140, 456);
-            this.num_tsresult.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tsresult.Location = new System.Drawing.Point(112, 365);
             this.num_tsresult.Name = "num_tsresult";
-            this.num_tsresult.Size = new System.Drawing.Size(50, 31);
+            this.num_tsresult.Size = new System.Drawing.Size(40, 27);
             this.num_tsresult.TabIndex = 61;
             this.num_tsresult.Value = new decimal(new int[] {
             7,
@@ -625,10 +603,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tsstepno
             // 
-            this.num_tsstepno.Location = new System.Drawing.Point(321, 334);
-            this.num_tsstepno.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tsstepno.Location = new System.Drawing.Point(257, 267);
             this.num_tsstepno.Name = "num_tsstepno";
-            this.num_tsstepno.Size = new System.Drawing.Size(50, 31);
+            this.num_tsstepno.Size = new System.Drawing.Size(40, 27);
             this.num_tsstepno.TabIndex = 49;
             this.num_tsstepno.Value = new decimal(new int[] {
             1,
@@ -638,19 +615,19 @@ namespace KeywordDriven.Desktop
             // 
             // num_tstestcaseid
             // 
-            this.num_tstestcaseid.Location = new System.Drawing.Point(140, 334);
-            this.num_tstestcaseid.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tstestcaseid.Location = new System.Drawing.Point(112, 267);
             this.num_tstestcaseid.Name = "num_tstestcaseid";
-            this.num_tstestcaseid.Size = new System.Drawing.Size(50, 31);
+            this.num_tstestcaseid.Size = new System.Drawing.Size(40, 27);
             this.num_tstestcaseid.TabIndex = 47;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(6, 240);
+            this.label24.Location = new System.Drawing.Point(5, 192);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(59, 25);
+            this.label24.Size = new System.Drawing.Size(49, 20);
             this.label24.TabIndex = 43;
             this.label24.Text = "Result";
             // 
@@ -658,9 +635,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(218, 201);
+            this.label23.Location = new System.Drawing.Point(174, 161);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(90, 25);
+            this.label23.Size = new System.Drawing.Size(73, 20);
             this.label23.TabIndex = 41;
             this.label23.Text = "RunMode";
             // 
@@ -668,9 +646,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(219, 160);
+            this.label21.Location = new System.Drawing.Point(175, 128);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 25);
+            this.label21.Size = new System.Drawing.Size(38, 20);
             this.label21.TabIndex = 37;
             this.label21.Text = "Title";
             // 
@@ -678,18 +657,18 @@ namespace KeywordDriven.Desktop
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(6, 201);
+            this.label22.Location = new System.Drawing.Point(5, 161);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(102, 25);
+            this.label22.Size = new System.Drawing.Size(85, 20);
             this.label22.TabIndex = 39;
             this.label22.Text = "Description";
             // 
             // num_tcrunmode
             // 
-            this.num_tcrunmode.Location = new System.Drawing.Point(321, 199);
-            this.num_tcrunmode.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tcrunmode.Location = new System.Drawing.Point(257, 159);
             this.num_tcrunmode.Name = "num_tcrunmode";
-            this.num_tcrunmode.Size = new System.Drawing.Size(50, 31);
+            this.num_tcrunmode.Size = new System.Drawing.Size(40, 27);
             this.num_tcrunmode.TabIndex = 42;
             this.num_tcrunmode.Value = new decimal(new int[] {
             3,
@@ -699,10 +678,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcresult
             // 
-            this.num_tcresult.Location = new System.Drawing.Point(140, 238);
-            this.num_tcresult.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tcresult.Location = new System.Drawing.Point(112, 190);
             this.num_tcresult.Name = "num_tcresult";
-            this.num_tcresult.Size = new System.Drawing.Size(50, 31);
+            this.num_tcresult.Size = new System.Drawing.Size(40, 27);
             this.num_tcresult.TabIndex = 44;
             this.num_tcresult.Value = new decimal(new int[] {
             4,
@@ -712,10 +690,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcdesc
             // 
-            this.num_tcdesc.Location = new System.Drawing.Point(140, 199);
-            this.num_tcdesc.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tcdesc.Location = new System.Drawing.Point(112, 159);
             this.num_tcdesc.Name = "num_tcdesc";
-            this.num_tcdesc.Size = new System.Drawing.Size(50, 31);
+            this.num_tcdesc.Size = new System.Drawing.Size(40, 27);
             this.num_tcdesc.TabIndex = 40;
             this.num_tcdesc.Value = new decimal(new int[] {
             2,
@@ -725,10 +702,9 @@ namespace KeywordDriven.Desktop
             // 
             // num_tctitle
             // 
-            this.num_tctitle.Location = new System.Drawing.Point(321, 160);
-            this.num_tctitle.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tctitle.Location = new System.Drawing.Point(257, 128);
             this.num_tctitle.Name = "num_tctitle";
-            this.num_tctitle.Size = new System.Drawing.Size(50, 31);
+            this.num_tctitle.Size = new System.Drawing.Size(40, 27);
             this.num_tctitle.TabIndex = 38;
             this.num_tctitle.Value = new decimal(new int[] {
             1,
@@ -738,26 +714,23 @@ namespace KeywordDriven.Desktop
             // 
             // num_tcid
             // 
-            this.num_tcid.Location = new System.Drawing.Point(140, 160);
-            this.num_tcid.Margin = new System.Windows.Forms.Padding(4);
+            this.num_tcid.Location = new System.Drawing.Point(112, 128);
             this.num_tcid.Name = "num_tcid";
-            this.num_tcid.Size = new System.Drawing.Size(50, 31);
+            this.num_tcid.Size = new System.Drawing.Size(40, 27);
             this.num_tcid.TabIndex = 36;
             // 
             // num_locpageobject
             // 
-            this.num_locpageobject.Location = new System.Drawing.Point(140, 67);
-            this.num_locpageobject.Margin = new System.Windows.Forms.Padding(4);
+            this.num_locpageobject.Location = new System.Drawing.Point(112, 54);
             this.num_locpageobject.Name = "num_locpageobject";
-            this.num_locpageobject.Size = new System.Drawing.Size(50, 31);
+            this.num_locpageobject.Size = new System.Drawing.Size(40, 27);
             this.num_locpageobject.TabIndex = 31;
             // 
             // num_loclocator
             // 
-            this.num_loclocator.Location = new System.Drawing.Point(321, 67);
-            this.num_loclocator.Margin = new System.Windows.Forms.Padding(4);
+            this.num_loclocator.Location = new System.Drawing.Point(257, 54);
             this.num_loclocator.Name = "num_loclocator";
-            this.num_loclocator.Size = new System.Drawing.Size(50, 31);
+            this.num_loclocator.Size = new System.Drawing.Size(40, 27);
             this.num_loclocator.TabIndex = 33;
             this.num_loclocator.Value = new decimal(new int[] {
             1,
@@ -769,9 +742,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(219, 69);
+            this.label19.Location = new System.Drawing.Point(175, 55);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 25);
+            this.label19.Size = new System.Drawing.Size(59, 20);
             this.label19.TabIndex = 32;
             this.label19.Text = "Locator";
             // 
@@ -779,9 +753,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(6, 296);
+            this.label17.Location = new System.Drawing.Point(5, 237);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(225, 25);
+            this.label17.Size = new System.Drawing.Size(186, 20);
             this.label17.TabIndex = 45;
             this.label17.Text = "TestSteps Columns Indexes";
             // 
@@ -789,9 +764,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(6, 69);
+            this.label18.Location = new System.Drawing.Point(5, 55);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 25);
+            this.label18.Size = new System.Drawing.Size(85, 20);
             this.label18.TabIndex = 30;
             this.label18.Text = "PageObject";
             // 
@@ -799,9 +775,10 @@ namespace KeywordDriven.Desktop
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(6, 122);
+            this.label16.Location = new System.Drawing.Point(5, 98);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(227, 25);
+            this.label16.Size = new System.Drawing.Size(187, 20);
             this.label16.TabIndex = 34;
             this.label16.Text = "TestCases Columns Indexes";
             // 
@@ -809,18 +786,50 @@ namespace KeywordDriven.Desktop
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(6, 29);
+            this.label15.Location = new System.Drawing.Point(5, 23);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(219, 25);
+            this.label15.Size = new System.Drawing.Size(180, 20);
             this.label15.TabIndex = 29;
             this.label15.Text = "Locators Columns Indexes";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(52, 464);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(709, 235);
+            this.tabControl1.TabIndex = 24;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(242, 92);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Automation";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(701, 202);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Manual";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(947, 563);
+            this.ClientSize = new System.Drawing.Size(989, 711);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Execute);
             this.Controls.Add(this.btn_setup);
@@ -829,7 +838,6 @@ namespace KeywordDriven.Desktop
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -858,6 +866,7 @@ namespace KeywordDriven.Desktop
             ((System.ComponentModel.ISupportInitialize)(this.num_tcid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_locpageobject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_loclocator)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -923,6 +932,9 @@ namespace KeywordDriven.Desktop
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btn_selectapklocation;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
