@@ -175,12 +175,8 @@ namespace KeywordDriven.Desktop
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.txt_projectname);
             this.groupBox5.Controls.Add(this.txt_generallocation);
-<<<<<<< HEAD
-            this.groupBox5.Location = new System.Drawing.Point(9, 0);
-=======
-            this.groupBox5.Location = new System.Drawing.Point(7, 7);
+            this.groupBox5.Location = new System.Drawing.Point(11, 0);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(427, 88);
             this.groupBox5.TabIndex = 12;
@@ -252,12 +248,8 @@ namespace KeywordDriven.Desktop
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txt_devicename);
-<<<<<<< HEAD
-            this.groupBox4.Location = new System.Drawing.Point(9, 248);
-=======
-            this.groupBox4.Location = new System.Drawing.Point(7, 317);
+            this.groupBox4.Location = new System.Drawing.Point(11, 310);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(427, 160);
             this.groupBox4.TabIndex = 11;
@@ -351,12 +343,8 @@ namespace KeywordDriven.Desktop
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.combo_drivertype);
             this.groupBox3.Controls.Add(this.label3);
-<<<<<<< HEAD
-            this.groupBox3.Location = new System.Drawing.Point(9, 86);
-=======
-            this.groupBox3.Location = new System.Drawing.Point(7, 114);
+            this.groupBox3.Location = new System.Drawing.Point(11, 108);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(427, 162);
             this.groupBox3.TabIndex = 10;
@@ -457,12 +445,8 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_setup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_setup.Enabled = false;
-<<<<<<< HEAD
-            this.btn_setup.Location = new System.Drawing.Point(226, 414);
-=======
-            this.btn_setup.Location = new System.Drawing.Point(354, 525);
+            this.btn_setup.Location = new System.Drawing.Point(282, 518);
             this.btn_setup.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.btn_setup.Name = "btn_setup";
             this.btn_setup.Size = new System.Drawing.Size(141, 29);
             this.btn_setup.TabIndex = 22;
@@ -474,12 +458,8 @@ namespace KeywordDriven.Desktop
             // 
             this.btn_Execute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Execute.Enabled = false;
-<<<<<<< HEAD
-            this.btn_Execute.Location = new System.Drawing.Point(374, 414);
-=======
-            this.btn_Execute.Location = new System.Drawing.Point(539, 525);
+            this.btn_Execute.Location = new System.Drawing.Point(467, 518);
             this.btn_Execute.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.btn_Execute.Name = "btn_Execute";
             this.btn_Execute.Size = new System.Drawing.Size(157, 29);
             this.btn_Execute.TabIndex = 23;
@@ -520,12 +500,7 @@ namespace KeywordDriven.Desktop
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
-<<<<<<< HEAD
-            this.groupBox1.Location = new System.Drawing.Point(444, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.groupBox1.Location = new System.Drawing.Point(548, 7);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
+            this.groupBox1.Location = new System.Drawing.Point(555, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(305, 408);
@@ -1307,19 +1282,13 @@ namespace KeywordDriven.Desktop
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(761, 457);
+            this.ClientSize = new System.Drawing.Size(947, 563);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Execute);
             this.Controls.Add(this.btn_setup);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-=======
-            this.ClientSize = new System.Drawing.Size(1049, 645);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
->>>>>>> 00a89b0e32bd941fe06cd4a61c4d9244bac7be77
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
