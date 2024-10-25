@@ -189,8 +189,8 @@ namespace KeywordDriven.Desktop
                 string logpath = projectpath + @"\TestLogs\log.txt";
                 string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
 
-                ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_tcid.Value), Convert.ToInt32(num_tctitle.Value), Convert.ToInt32(num_tcdesc.Value), Convert.ToInt32(num_tcrunmode.Value), Convert.ToInt32(num_tcresult.Value));
-                ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_tstestcaseid.Value), Convert.ToInt32(num_tsstepno.Value), Convert.ToInt32(num_tsdesc.Value), Convert.ToInt32(num_tspageobject.Value), Convert.ToInt32(num_tsactionkeyword.Value), Convert.ToInt32(num_tsdataset.Value), Convert.ToInt32(num_tsresult.Value));
+                ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_manual_tcid.Value), Convert.ToInt32(num_manual_tctitle.Value), Convert.ToInt32(num_manual_tcdesc.Value), Convert.ToInt32(num_manual_tcrunmode.Value), Convert.ToInt32(num_manual_tcresult.Value));
+                ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_manual_tstestcaseid.Value), Convert.ToInt32(num_manual_tsstepno.Value), Convert.ToInt32(num_manual_tsdesc.Value), Convert.ToInt32(num_manual_tspageobject.Value), Convert.ToInt32(num_manual_tsactionkeyword.Value), Convert.ToInt32(num_manual_tsdataset.Value), Convert.ToInt32(num_manual_tsresult.Value));
 
                 ExcelManager.SetExcel(excelpath);
                 ExtentReporter.SetExtentReporter(extentreportpath);
@@ -211,5 +211,6 @@ namespace KeywordDriven.Desktop
 
             label1.Text = "Finished!";
         }
+
     }
 }

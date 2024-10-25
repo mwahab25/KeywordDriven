@@ -11,6 +11,7 @@ using OpenQA.Selenium.Remote;
 using KeywordDriven.Config;
 using KeywordDriven.Utils;
 using KeywordDriven.Execution;
+using System.Drawing.Imaging;
 
 namespace KeywordDriven.ActionKeywords
 {
@@ -18,7 +19,7 @@ namespace KeywordDriven.ActionKeywords
     {
         private static IWebDriver driver;
 
-        private static AndroidDriver<AndroidElement> appiumdriver;
+        private static AndroidDriver appiumdriver;
 
         private static FirefoxDriver BuildFirefoxDriver()
         {
@@ -129,28 +130,28 @@ namespace KeywordDriven.ActionKeywords
         private static void OpenAndroidDriver(string devicename, string udid, string platformversion, string apppath)
         {
             var appiumoption = new AppiumOptions();
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.DeviceName, devicename);
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.Udid, udid);
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, platformversion);
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.App, apppath);
-            appiumoption.AddAdditionalCapability(MobileCapabilityType.NoReset, true);
+            appiumoption.AddAdditionalOption(MobileCapabilityType.DeviceName, devicename);
+            appiumoption.AddAdditionalOption(MobileCapabilityType.Udid, udid);
+            appiumoption.AddAdditionalOption(MobileCapabilityType.PlatformName, "Android");
+            appiumoption.AddAdditionalOption(MobileCapabilityType.PlatformVersion, platformversion);
+            appiumoption.AddAdditionalOption(MobileCapabilityType.App, apppath);
+            appiumoption.AddAdditionalOption(MobileCapabilityType.NoReset, true);
 
-            appiumdriver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), appiumoption);
+            appiumdriver = new AndroidDriver(new Uri("http://127.0.0.1:4723/wd/hub"), appiumoption);
         }
 
         private static void TakeScreenshot(string directory, string imgName)
         {
             var ss = ((ITakesScreenshot)driver).GetScreenshot();
             var ssFileName = Path.Combine(directory, imgName);
-            ss.SaveAsFile($"{ssFileName}.png", ScreenshotImageFormat.Png);
+            ss.SaveAsFile($"{ssFileName}.png");
         }
 
         private static void TakeScreenshot(string imgName)
         {
             var ss = ((ITakesScreenshot)driver).GetScreenshot();
             var ssFileName = Path.Combine("", imgName);
-            ss.SaveAsFile($"{ssFileName}.png", ScreenshotImageFormat.Png);
+            ss.SaveAsFile($"{ssFileName}.png");
         }
 
         #region Public methods

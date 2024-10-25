@@ -1,7 +1,7 @@
 ﻿using System;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
-using AventStack.ExtentReports.Reporter.Configuration;
+using AventStack.ExtentReports.Reporter.Config;
 
 namespace KeywordDriven.Utils
 {
@@ -14,9 +14,10 @@ namespace KeywordDriven.Utils
         public static void SetExtentReporter(string reportpath)
         {
             extent = new ExtentReports();
-            var htmlReporter = new ExtentHtmlReporter(reportpath);
-            htmlReporter.Config.Theme = Theme.Standard;
-            extent.AttachReporter(htmlReporter);
+            
+            var spark = new ExtentSparkReporter(reportpath);
+            
+            extent.AttachReporter(spark);
         }
 
         public static void Flush()
@@ -37,37 +38,37 @@ namespace KeywordDriven.Utils
 
         internal static void StartTestCase(String sTestCaseName)
         {
-            testcase.Info("Start TestCase " + sTestCaseName);
+            testcase.Log(Status.Info,"Start TestCase " + sTestCaseName);
         }
 
         internal static void EndTestCase(String sTestCaseName)
         {
-            testcase.Info("End TestCase " + sTestCaseName);
+            testcase.Log(Status.Info, "End TestCase " + sTestCaseName);
         }
 
         internal static void Info(String message)
         {
-            testcase.Info(message);
+            testcase.Log(Status.Info, message);
         }
 
         internal static void Pass(String message)
         {
-            testcase.Pass(message);
+            testcase.Log(Status.Pass, message);
         }
 
         internal static void Fail(String message)
         {
-            testcase.Fail(message);
+            testcase.Log(Status.Fail,message);
         }
 
         internal static void Error(String message)
         {
-            testcase.Error(message);
+            testcase.Log(Status.Error,message);
         }
 
         internal static void Warn(String message)
         {
-            testcase.Warning(message);
+            testcase.Log(Status.Warning,message);
         }
 
         internal static void AddScreenShot(String path)
@@ -77,27 +78,27 @@ namespace KeywordDriven.Utils
         
         internal static void NodeInfo(String message)
         {
-            node.Info(message);
+            node.Log(Status.Info,message);
         }
 
         internal static void NodePass(String message)
         {
-            node.Pass(message);
+            node.Log(Status.Pass,message);
         }
 
         internal static void NodeFail(String message)
         {
-            node.Fail(message);
+            node.Log(Status.Fail,message);
         }
 
         internal static void NodeError(String message)
         {
-            node.Error(message);
+            node.Log(Status.Error, message);
         }
 
         internal static void NodeWarn(String message)
         {
-            node.Warning(message);
+            node.Log(Status.Warning,message);
         }
 
         internal static void NodeAddScreenShot(String path)
