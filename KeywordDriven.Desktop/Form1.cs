@@ -28,7 +28,8 @@ namespace KeywordDriven.Desktop
             {
                 string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
                 string excelpath = projectpath + @"\TestDefintion\Testcases.xlsx";
-                string extentreportpath = projectpath + @"\TestResults\index.html";
+                string extentreportpath = projectpath + @"\TestResults\index"+DateTime.Now.Year+DateTime.Now.Month+DateTime.Now.Day+DateTime.Now.Hour+DateTime.Now.Minute+DateTime.Now.Second+".html";
+               
                 string logpath = projectpath + @"\TestLogs\log.txt";
                 string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
 
@@ -177,40 +178,7 @@ namespace KeywordDriven.Desktop
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btn_Manual_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
-                string excelpath = projectpath + @"\TestDefintion\Testcases.xlsx";
-                string extentreportpath = projectpath + @"\TestResults\index.html";
-                string logpath = projectpath + @"\TestLogs\log.txt";
-                string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
-
-                ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_manual_tcid.Value), Convert.ToInt32(num_manual_tctitle.Value), Convert.ToInt32(num_manual_tcdesc.Value), Convert.ToInt32(num_manual_tcrunmode.Value), Convert.ToInt32(num_manual_tcresult.Value));
-                ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_manual_tstestcaseid.Value), Convert.ToInt32(num_manual_tsstepno.Value), Convert.ToInt32(num_manual_tsdesc.Value), Convert.ToInt32(num_manual_tspageobject.Value), Convert.ToInt32(num_manual_tsactionkeyword.Value), Convert.ToInt32(num_manual_tsdataset.Value), Convert.ToInt32(num_manual_tsresult.Value));
-
-                ExcelManager.SetExcel(excelpath);
-                ExtentReporter.SetExtentReporter(extentreportpath);
-                Log.SetLogger(logpath);
-
-               
-                ManualTest.Execute_TestCases();
-
-                ExtentReporter.Flush();
-                ExcelManager.SaveCloseExcel();
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            label1.Text = "Finished!";
-        }
+        }      
 
     }
 }

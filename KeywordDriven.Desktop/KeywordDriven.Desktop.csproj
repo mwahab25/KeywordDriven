@@ -9,7 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="98.0.4758.10200" />
+    <None Remove="Form1.Designer.cs~RFc9ec90.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="133.0.6943.5300" />
   </ItemGroup>
 
   <ItemGroup>

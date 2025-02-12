@@ -11,7 +11,7 @@ namespace KeywordDriven.Utils
         private static Excel.Worksheet ExcelWSheet;
 
         public static void SetExcel(String path)
-        {
+        {            
             ExcelApp = new Excel.Application
             {
                 Visible = false
