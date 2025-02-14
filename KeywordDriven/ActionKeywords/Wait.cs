@@ -18,7 +18,7 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeInfo("WaitUntil ..");
 
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
-                wait.Until(d => d.FindElement(by));
+                wait.Until(d => d.FindElement(by).Displayed);
             }
             catch (Exception e)
             {
@@ -28,16 +28,22 @@ namespace KeywordDriven.ActionKeywords
         
         private static void WaitFluentUntil(By by, IWebDriver driver)
         {
+            
             try
             {
                 Log.Info("WaitFluentUntil ..");
                 ExtentReporter.NodeInfo("WaitFluentUntil ..");
 
-                DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(driver);
-                fluentWait.Timeout = TimeSpan.FromSeconds(DriverSetting._timeout);
-                fluentWait.PollingInterval = TimeSpan.FromSeconds(1);
-                fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-                IWebElement searchResult = fluentWait.Until(x => x.FindElement(by));
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout))
+                {
+                    PollingInterval = TimeSpan.FromMilliseconds(300),
+                };
+                wait.IgnoreExceptionTypes(typeof(ElementNotInteractableException));
+
+                wait.Until(d => {
+                    d.FindElement(by);
+                    return true;
+                });
             }
             catch (Exception e)
             {
@@ -86,6 +92,8 @@ namespace KeywordDriven.ActionKeywords
 
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DriverSetting._timeout));
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by));
+
+                WaitFluentUntil(by, driver);
             }
             catch (Exception e)
             {
@@ -125,8 +133,32 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeError("Failed WaitUntilInvisibilityElement | Exception: " + e.Message);
             }
         }
-
+        
+        
         #region Public methods
+
+        public static void WaitForElement(String obj, String data)
+        {
+            try
+            {
+                Log.Info($"Waiting \"{obj}\" ");
+                ExtentReporter.NodeInfo($"Waiting \"{obj}\" ");
+
+                string[] locator = obj.Split('_');
+                By by = LocateValue(locator[1], GetKey(obj));
+
+                WaitFluentUntil(by, driver);
+
+                DriverScript.iOutcome = 1;
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Failed WaitSeconds | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Failed WaitSeconds | Exception: {e.Message}");
+                DriverScript.iOutcome = 3;
+            }
+        }
+        
         public static void WaitSeconds(String obj, String data)
         {
             try
@@ -146,6 +178,7 @@ namespace KeywordDriven.ActionKeywords
                 DriverScript.iOutcome = 3;
             }
         }
+        
         #endregion
     }
 }

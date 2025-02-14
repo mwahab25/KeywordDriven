@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeywordDriven", "KeywordDriven\KeywordDriven.csproj", "{6E393F9F-568F-4C9C-8AAC-942790244D5D}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeywordDriven.TestExplorer"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeywordDriven.Desktop", "KeywordDriven.Desktop\KeywordDriven.Desktop.csproj", "{C3BE2F69-D983-438A-848F-C55D5718947A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KeywordDriven.Desktop.SetupOne", "KeywordDriven.Desktop.SetupOne\KeywordDriven.Desktop.SetupOne.vdproj", "{EF538168-9609-4402-9C1D-1999A8F3E8B1}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KeywordDriven.Desktop.Setup", "KeywordDriven.Desktop.Setup\KeywordDriven.Desktop.Setup.vdproj", "{D1CF0BAD-55C9-4144-85F0-F6DBA6173BD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{C3BE2F69-D983-438A-848F-C55D5718947A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3BE2F69-D983-438A-848F-C55D5718947A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3BE2F69-D983-438A-848F-C55D5718947A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF538168-9609-4402-9C1D-1999A8F3E8B1}.Debug|Any CPU.ActiveCfg = Debug
-		{EF538168-9609-4402-9C1D-1999A8F3E8B1}.Release|Any CPU.ActiveCfg = Release
+		{D1CF0BAD-55C9-4144-85F0-F6DBA6173BD7}.Debug|Any CPU.ActiveCfg = Debug
+		{D1CF0BAD-55C9-4144-85F0-F6DBA6173BD7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

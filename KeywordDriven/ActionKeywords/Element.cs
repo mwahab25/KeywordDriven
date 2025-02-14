@@ -69,9 +69,16 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Info("ClickByDriver ..");
                 ExtentReporter.NodeInfo("ClickByDriver ..");
-
-                driver.FindElement(by).Click();
-                return true;
+                if(IsElementPresent(by)) 
+                {
+                    driver.FindElement(by).Click();
+                    return true;
+                }        
+                else
+                {
+                    return false;
+                }
+                
             }
             catch (Exception e)
             {
@@ -124,9 +131,16 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Info("InputByDriver ..");
                 ExtentReporter.NodeInfo("InputByDriver ..");
-
-                driver.FindElement(by).SendKeys(data);
-                return true;
+                if (IsElementPresent(by))
+                {
+                    driver.FindElement(by).SendKeys(data);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
             }
             catch (Exception e)
             {
@@ -192,24 +206,6 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
-        private static bool SelectValueByDriver(By by, string data)
-        {
-            try
-            {
-                Log.Info("SelectValueByDriver ..");
-                ExtentReporter.NodeInfo("SelectValueByDriver ..");
-
-                new SelectElement(driver.FindElement(by)).SelectByValue(data);
-                return true;
-            }
-            catch (Exception e)
-            {
-                Log.Info($"Not able to SelectValueByDriver | Exception: {e.Message}");
-                ExtentReporter.NodeInfo($"Not able to SelectValueByDriver | Exception: {e.Message}");
-                return false;
-            }
-        }
-
         private static bool SelectTextByappiumDriver(By by, string data)
         {
             try
@@ -224,6 +220,27 @@ namespace KeywordDriven.ActionKeywords
             {
                 Log.Info($"Not able to SelectTextByappiumDriver | Exception: {e.Message}");
                 ExtentReporter.NodeInfo($"Not able to SelectTextByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+        
+        private static bool SelectValueByDriver(By by, string data)
+        {
+            try
+            {
+                Log.Info("SelectValueByDriver ..");
+                ExtentReporter.NodeInfo("SelectValueByDriver ..");
+                if (IsElementPresent(by))
+                {
+                    new SelectElement(driver.FindElement(by)).SelectByValue(data);
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to SelectValueByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to SelectValueByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -244,8 +261,67 @@ namespace KeywordDriven.ActionKeywords
                 ExtentReporter.NodeInfo($"Not able to SelectValueByappiumDriver | Exception: {e.Message}");
                 return false;
             }
+        } 
+        
+        private static bool ClearByDriver(By by)
+        {
+            try
+            {
+                Log.Info("ClearByDriver ..");
+                ExtentReporter.NodeInfo("ClearByDriver ..");
+
+                if (IsElementPresent(by))
+                {
+                    driver.FindElement(by).Clear();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to ClearByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClearByDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+        
+        private static bool ClearByJavascript(By by)
+        {
+            try
+            {
+                Log.Info("ClearByJavascript ..");
+                ExtentReporter.NodeInfo("ClearByJavascript ..");
+
+                IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
+                jse.ExecuteScript("arguments[0].value='';", driver.FindElement(by));
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to ClearByJavascript | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClearByJavascript | Exception: {e.Message}");
+                return false;
+            }
         }
 
+        private static bool ClearByappiumDriver(By by)
+        {
+            try
+            {
+                Log.Info("ClearByappiumDriver ..");
+                ExtentReporter.NodeInfo("ClearByappiumDriver ..");
+
+                appiumdriver.FindElement(by).Clear();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to ClearByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClearByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+        
         #region Public methods
         public static void Click(String obj, String data)
         {
@@ -424,60 +500,6 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
-        public static void DragDrop(String obj, String data)
-        {
-            Log.Info("Draging Webelement " + obj);
-            ExtentReporter.NodeInfo("Draging Webelement " + obj);
-            try
-            {
-                string[] locator1 = obj.Split('_');
-                string[] locator2value = data.Split('_');
-
-                By byDragElement = LocateValue(locator1[1], GetKey(obj));
-                By byDropValue = LocateValue(locator2value[1], GetKey(data));
-
-                IWebElement source;
-                IWebElement target;
-
-                WaitUntilExists(byDragElement, driver);
-                if (IsElementPresent(byDragElement))
-                {
-                    source = driver.FindElement(byDragElement);
-                }
-                else
-                {
-                    source = driver.FindElement(byDragElement);
-                }
-
-                WaitUntilExists(byDropValue, driver);
-                if (IsElementPresent(byDragElement))
-                {
-                    target = driver.FindElement(byDropValue);
-                }
-                else
-                {
-                    target = driver.FindElement(byDropValue);
-                }
-
-                IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
-                WaitSeconds("", "3");
-
-                Actions actions = new Actions(driver);
-                actions.ClickAndHold(source).Perform();
-                actions.MoveByOffset(target.Location.X - source.Location.X, target.Location.Y - source.Location.Y).Perform();
-                actions.Release(target).Perform();
-
-                DriverScript.iOutcome = 1;
-                WaitSeconds("", "3");
-            }
-            catch (Exception e)
-            {
-                Log.Error("Not able to drag and drop | Exception: " + e.Message);
-                ExtentReporter.NodeError("Not able to drag and drop | Exception: " + e.Message);
-                DriverScript.iOutcome = 3;
-            }
-        }
-
         public static void KeyPress(String obj, String data)
         {
             Log.Info($"KeyPress \"{data}\" on \"{obj}\"");
@@ -514,21 +536,64 @@ namespace KeywordDriven.ActionKeywords
             }
         }
 
-        public static void KeyPressEnter(String obj, String data)
-        {
-            Actions builder = new Actions(driver);
-            builder.SendKeys(Keys.Enter);
-        }
-
-        public static void DoubleClick(String obj, String data)
-        {
-
-        }
-        
         public static void Clear(String obj, String data)
         {
+            Log.Info($"Clearing content of Element \"{obj}\"");
+            ExtentReporter.NodeInfo($"Clearing content of Element \"{obj}\"");
 
-        }      
+            try
+            {
+                string[] locator = obj.Split('_');
+                By by = LocateValue(locator[1], GetKey(obj));
+
+                if (locator[0] == "Mobile")
+                {
+                    WaitUntilVisible(by, appiumdriver);
+                    WaitSeconds("", "2");
+
+                    if (!ClearByappiumDriver(by))
+                    {
+                        Log.Error("Failed ClearByappiumDriver");
+                        ExtentReporter.NodeError("Failed ClearByappiumDriver");
+                        DriverScript.iOutcome = 3;
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }
+                }
+                else
+                {
+                    WaitUntilClickable(by, driver);
+                    WaitSeconds("", "2");
+
+                    if (!ClearByDriver(by))
+                    {
+                        if (!ClearByJavascript(by))
+                        {
+                            Log.Error("Failed ClearByDriver and ClearByJavascript");
+                            ExtentReporter.NodeError("Failed ClearByDriver and ClickByJavascript");
+                            DriverScript.iOutcome = 3;
+                        }
+                        else
+                        {
+                            DriverScript.iOutcome = 1;
+                        }
+                    }
+                    else
+                    {
+                        DriverScript.iOutcome = 1;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Failed Clear | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed Clear | Exception: {e.Message}");
+                ExtentReporter.AddScreenShot("");
+                DriverScript.iOutcome = 3;
+            }
+        }
 
         #endregion
     }

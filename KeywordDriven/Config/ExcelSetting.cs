@@ -22,10 +22,10 @@
         internal static int Col_TestSteps_TestCaseID = 0;
         internal static int Col_TestSteps_StepNo = 1;
         internal static int Col_TestSteps_Description = 2;
-        internal static int Col_TestSteps_PageObject = 4;
-        internal static int Col_TestSteps_ActionKeyword = 5;
-        internal static int Col_TestSteps_TestData = 6;
-        internal static int Col_TestSteps_Result = 7;
+        internal static int Col_TestSteps_PageObject = 3;
+        internal static int Col_TestSteps_ActionKeyword = 4;
+        internal static int Col_TestSteps_TestData = 5;
+        internal static int Col_TestSteps_Result = 6;
 
         public static void Locators_Columns_Index(int PageObject, int Locator)
         {

@@ -16,12 +16,12 @@ namespace KeywordDriven.TestExplorer
             string startupPath = Path.GetFullPath(@"..\..\..\");
 
             string TestDefintion = Path.Combine(startupPath, @"TestDefintion");
-            string TestLogs = Path.Combine(startupPath, @"TestDefintion");
-            string TestResults = Path.Combine(startupPath, @"TestDefintion");
+            string TestLogs = Path.Combine(startupPath, @"TestLogs");
+            string TestResults = Path.Combine(startupPath, @"TestResults");
             string TestResources = Path.Combine(startupPath, @"TestResources");
 
             ExcelManager.SetExcel(TestDefintion + @"\TestCases.xlsx");
-            ExtentReporter.SetExtentReporter(TestResults + @"\TestResults\index.html");
+            ExtentReporter.SetExtentReporter(TestResults + @"\index.html");
             Log.SetLogger(TestLogs + @"\log.txt");
 
             DriverSetting.WebDriver("local", 20, 200, false);

@@ -24,36 +24,38 @@ namespace KeywordDriven.Desktop
 
         private void btn_Execute_Click(object sender, EventArgs e)
         {
+            string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
+            string excelpath = projectpath + @"\TestDefintion\Testcases.xlsx";
+            string extentreportpath = projectpath + @"\TestResults\index" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + ".html";
+
+            string logpath = projectpath + @"\TestLogs\log.txt";
+            string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
+
+            ExcelSetting.Locators_Columns_Index(Convert.ToInt32(num_locpageobject.Value), Convert.ToInt32(num_loclocator.Value));
+            ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_tcid.Value), Convert.ToInt32(num_tctitle.Value), Convert.ToInt32(num_tcdesc.Value), Convert.ToInt32(num_tcrunmode.Value), Convert.ToInt32(num_tcresult.Value));
+            ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_tstestcaseid.Value), Convert.ToInt32(num_tsstepno.Value), Convert.ToInt32(num_tsdesc.Value), Convert.ToInt32(num_tspageobject.Value), Convert.ToInt32(num_tsactionkeyword.Value), Convert.ToInt32(num_tsdataset.Value), Convert.ToInt32(num_tsresult.Value));
+
+            DriverSetting.WebDriver(combo_drivertype.Text, Convert.ToDouble(num_timeout.Text), Convert.ToDouble(num_navtimeout.Text), Convert.ToBoolean(combo_headless.Text));
+            DriverSetting.AndroidDriver(txt_devicename.Text, txt_udid.Text, txt_platformversion.Text, apkpath);
+
+            ExcelManager.SetExcel(excelpath);
+            ExtentReporter.SetExtentReporter(extentreportpath);
+            Log.SetLogger(logpath);
+
             try
             {
-                string projectpath = txt_generallocation.Text + @"\" + txt_projectname.Text;
-                string excelpath = projectpath + @"\TestDefintion\Testcases.xlsx";
-                string extentreportpath = projectpath + @"\TestResults\index"+DateTime.Now.Year+DateTime.Now.Month+DateTime.Now.Day+DateTime.Now.Hour+DateTime.Now.Minute+DateTime.Now.Second+".html";
-               
-                string logpath = projectpath + @"\TestLogs\log.txt";
-                string apkpath = projectpath + @"\TestResources\" + txt_apkpath.Text;
-
-                ExcelSetting.Locators_Columns_Index(Convert.ToInt32(num_locpageobject.Value), Convert.ToInt32(num_loclocator.Value));
-                ExcelSetting.TestCases_Columns_Index(Convert.ToInt32(num_tcid.Value), Convert.ToInt32(num_tctitle.Value), Convert.ToInt32(num_tcdesc.Value), Convert.ToInt32(num_tcrunmode.Value), Convert.ToInt32(num_tcresult.Value));
-                ExcelSetting.TestSteps_Columns_Index(Convert.ToInt32(num_tstestcaseid.Value), Convert.ToInt32(num_tsstepno.Value), Convert.ToInt32(num_tsdesc.Value), Convert.ToInt32(num_tspageobject.Value), Convert.ToInt32(num_tsactionkeyword.Value), Convert.ToInt32(num_tsdataset.Value), Convert.ToInt32(num_tsresult.Value));
-                
-                ExcelManager.SetExcel(excelpath);
-                ExtentReporter.SetExtentReporter(extentreportpath);
-                Log.SetLogger(logpath);
-
-                DriverSetting.WebDriver(combo_drivertype.Text, Convert.ToDouble(num_timeout.Text), Convert.ToDouble(num_navtimeout.Text), Convert.ToBoolean(combo_headless.Text));
-                DriverSetting.AndroidDriver(txt_devicename.Text, txt_udid.Text, txt_platformversion.Text, apkpath);
-
                 DriverScript.Execute_TestCases();
 
                 ExtentReporter.Flush();
                 ExcelManager.SaveCloseExcel();
-
                 
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
+                ExtentReporter.Flush();
+                ExcelManager.SaveCloseExcel();
             }
         }
 

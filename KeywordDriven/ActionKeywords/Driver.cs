@@ -184,8 +184,8 @@ namespace KeywordDriven.ActionKeywords
                 {
                     Log.Info("Closing Browser ");
                     ExtentReporter.NodeInfo("Closing Browser ");
-                    //driver.Quit();
-                    driver.Close();
+                    driver.Close();                  
+                    driver.Dispose();
 
                     DriverScript.iOutcome = 1;
 
