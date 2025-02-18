@@ -1,18 +1,14 @@
-Starting timestamp: 2/14/2025 4:34:27 PM
+Starting timestamp: 2/18/2025 11:54:34 PM
 [INFO]: Start TestCase TS1
 [INFO]: Opening Browser "Chrome"
 [INFO]: Browser Chrome Opened
 [INFO]: Navigating to URL "https://demo.playwright.dev/todomvc/"
 [INFO]: Typing "Test Automation" in Element "Home_xpath_txt_searchbox"
-[INFO]: WaitUntilClickable ..
-[INFO]: Waiting "2" seconds
+[INFO]: WaitFluentUntil ..
 [INFO]: InputByDriver ..
 [INFO]: KeyPress "Enter" on "Home_xpath_txt_searchbox"
 [INFO]: AssertTextPresent "Test Automation", Element "Home_xpath_radiovalue_itemoption"
-[INFO]: WaitUntilVisible ..
 [INFO]: WaitFluentUntil ..
-[INFO]: Waiting "2" seconds
-[INFO]: Waiting "2" seconds
 [INFO]: Closing Browser 
 [INFO]: Browser Closed
 [INFO]: End TestCase TS1
@@ -22,20 +18,14 @@ Starting timestamp: 2/14/2025 4:34:27 PM
 [INFO]: Browser Chrome Opened
 [INFO]: Navigating to URL "https://demo.playwright.dev/todomvc/"
 [INFO]: Typing "Test Automation" in Element "Home_xpath_txt_searchbox"
-[INFO]: WaitUntilClickable ..
-[INFO]: Waiting "2" seconds
+[INFO]: WaitFluentUntil ..
 [INFO]: InputByDriver ..
 [INFO]: KeyPress "Enter" on "Home_xpath_txt_searchbox"
 [INFO]: Clicking on Element "Home_xpath_radiobtn_itemoption"
-[INFO]: WaitUntilClickable ..
-[ERROR]: Failed WaitUntilClickable | Exception: Timed out after 20 seconds
-[INFO]: Waiting "2" seconds
+[INFO]: WaitFluentUntil ..
 [INFO]: ClickByDriver ..
 [INFO]: AssertTextPresent "Clear completed", Element "Home_xpath_btn_clearcompleted"
-[INFO]: WaitUntilVisible ..
 [INFO]: WaitFluentUntil ..
-[INFO]: Waiting "2" seconds
-[INFO]: Waiting "2" seconds
 [INFO]: Closing Browser 
 [INFO]: Browser Closed
 [INFO]: End TestCase TS2

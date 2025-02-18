@@ -24,7 +24,7 @@ namespace KeywordDriven.TestExplorer
             ExtentReporter.SetExtentReporter(TestResults + @"\index.html");
             Log.SetLogger(TestLogs + @"\log.txt");
 
-            DriverSetting.WebDriver("local", 20, 200, false);
+            DriverSetting.WebDriver("local", 20, 200,false);
             DriverSetting.AndroidDriver("Pixel_3a_API_30_x86", "emulator-5554", "11", TestResources + @"\apk-v5.1.4.apk");
         }
 

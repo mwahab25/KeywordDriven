@@ -335,8 +335,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilVisible(by, appiumdriver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, appiumdriver);
 
                     if (!ClickByappiumDriver(by))
                     {
@@ -351,8 +350,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntilClickable(by, driver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, driver);
 
                     if (!ClickByDriver(by))
                     {
@@ -393,8 +391,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilVisible(by, appiumdriver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, appiumdriver);
 
                     if (!InputByappiumDriver(by, data))
                     {
@@ -409,8 +406,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntilClickable(by, driver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, driver);
 
                     if (!InputByDriver(by, data))
                     {
@@ -451,7 +447,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilExists(by, appiumdriver);
+                    WaitFluentUntil(by, appiumdriver);
                     if (!SelectTextByappiumDriver(by, data))
                     {
                         if (!SelectValueByappiumDriver(by, data))
@@ -472,7 +468,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntilExists(by, driver);
+                    WaitFluentUntil(by, driver);
                     if (!SelectTextByDriver(by, data))
                     {
                         if (!SelectValueByDriver(by, data))
@@ -548,8 +544,7 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilVisible(by, appiumdriver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, appiumdriver);
 
                     if (!ClearByappiumDriver(by))
                     {
@@ -564,8 +559,7 @@ namespace KeywordDriven.ActionKeywords
                 }
                 else
                 {
-                    WaitUntilClickable(by, driver);
-                    WaitSeconds("", "2");
+                    WaitFluentUntil(by, driver);
 
                     if (!ClearByDriver(by))
                     {

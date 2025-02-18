@@ -92,25 +92,23 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilVisible(by, appiumdriver);
+                    WaitFluentUntil(by, appiumdriver);
 
                     bool result = GetTextByappiumDriver(by).Contains(data);
 
                     Assert.AreEqual(result, true);
 
                     DriverScript.iOutcome = 1;
-                    WaitSeconds("", "2");
                 }
                 else
                 {
-                    WaitUntilVisible(by, driver);
+                    WaitFluentUntil(by, driver);
 
                     bool result = GetTextByDriver(by).Contains(data);
 
                     Assert.AreEqual(result, true);
 
                     DriverScript.iOutcome = 1;
-                    WaitSeconds("", "2");
                 }
             }
             catch (AssertFailedException e)
@@ -140,25 +138,23 @@ namespace KeywordDriven.ActionKeywords
 
                 if (locator[0] == "Mobile")
                 {
-                    WaitUntilVisible(by, appiumdriver);
+                    WaitFluentUntil(by, appiumdriver);
 
                     bool result = GetTextByappiumDriver(by).Contains(data);
 
                     Assert.AreNotEqual(result, true);
 
                     DriverScript.iOutcome = 1;
-                    WaitSeconds("", "2");
                 }
                 else
                 {
-                    WaitUntilVisible(by, driver);
+                    WaitFluentUntil(by, driver);
 
                     bool result = GetTextByDriver(by).Contains(data);
 
                     Assert.AreEqual(result, true);
 
                     DriverScript.iOutcome = 1;
-                    WaitSeconds("", "2");
                 }
             }
             catch (AssertFailedException e)
